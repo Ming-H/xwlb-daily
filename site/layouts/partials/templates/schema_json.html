@@ -1,0 +1,4 @@
+{{- /* Override PaperMod schema_json to disable JSON-LD - article body breaks JSON escaping */ -}}
+{{- /* Only output breadcrumb, skip BlogPosting with full articleBody */ -}}
+{{ if .IsPage }}
+{{ end }}
