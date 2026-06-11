@@ -23,6 +23,15 @@ def load_json(path: Path) -> dict:
         return json.load(f)
 
 
+def sanitize_for_yaml(text: str) -> str:
+    """清理文本中会导致 YAML/JSON 解析失败的字符"""
+    text = text.replace('"', "'")
+    text = text.replace('\\', '')
+    text = text.replace('%', '%%')
+    text = text.replace('\n', ' ')
+    return text.strip()
+
+
 def build_daily_page(date_str: str) -> bool:
     """生成每日新闻页面"""
     analytics = load_json(ANALYTICS_DIR / f"{date_str}.json")
@@ -41,7 +50,7 @@ draft: false
 layout: "daily"
 economy_count: {economy_count}
 total_count: {len(articles)}
-summary: "{analytics.get('summary', '')}"
+summary: "{sanitize_for_yaml(analytics.get('summary', ''))}"
 ---
 """
 
