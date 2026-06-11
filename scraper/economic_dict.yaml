@@ -1,0 +1,292 @@
+# 经济关键词词库 + 板块映射 + 用词强度
+
+# ============================================
+# 一、行业/板块 → 关键词 → 代表性股票
+# ============================================
+sectors:
+  工程机械:
+    keywords: [挖掘机, 装载机, 工程机械, 推土机, 起重机, 盾构机]
+    stocks:
+      - {code: "600031", name: "三一重工", market: SH}
+      - {code: "000157", name: "中联重科", market: SZ}
+      - {code: "000425", name: "徐工机械", market: SZ}
+      - {code: "600150", name: "中国船舶", market: SH}
+
+  基建投资:
+    keywords: [基建, 基础设施, 交通运输, 铁路, 公路, 桥梁, 机场, 港口, 超长期国债, 专项债]
+    stocks:
+      - {code: "601186", name: "中国铁建", market: SH}
+      - {code: "601800", name: "中国交建", market: SH}
+      - {code: "601669", name: "中国电建", market: SH}
+      - {code: "601390", name: "中国中铁", market: SH}
+
+  地下管网:
+    keywords: [地下管网, 管网改造, 综合管廊, 排水管道, 供水管网, 燃气管网]
+    stocks:
+      - {code: "603958", name: "哈空调", market: SH}
+      - {code: "300055", name: "万邦达", market: SZ}
+      - {code: "002671", name: "龙泉股份", market: SZ}
+      - {code: "300334", name: "津膜科技", market: SZ}
+
+  半导体:
+    keywords: [芯片, 半导体, 光刻, 集成电路, 晶圆, 封测, EDA, 算力芯片]
+    stocks:
+      - {code: "688981", name: "中芯国际", market: SH}
+      - {code: "002049", name: "紫光国微", market: SZ}
+      - {code: "603501", name: "韦尔股份", market: SH}
+      - {code: "688012", name: "中微公司", market: SH}
+
+  AI人工智能:
+    keywords: [人工智能, 大模型, AI, 深度学习, 智能制造, 智能体, 算力]
+    stocks:
+      - {code: "002230", name: "科大讯飞", market: SZ}
+      - {code: "688787", name: "海天瑞声", market: SH}
+      - {code: "300454", name: "深信服", market: SZ}
+      - {code: "688041", name: "海光信息", market: SH}
+
+  机器人:
+    keywords: [机器人, 人形机器人, 具身智能, 工业机器人, 机械臂, 减速器, 伺服电机]
+    stocks:
+      - {code: "601689", name: "拓普集团", market: SH}
+      - {code: "688017", name: "绿的谐波", market: SH}
+      - {code: "002747", name: "埃斯顿", market: SZ}
+      - {code: "300124", name: "汇川技术", market: SZ}
+
+  新能源:
+    keywords: [新能源, 光伏, 风电, 太阳能, 核电, 储能, 充电桩, 清洁能源]
+    stocks:
+      - {code: "601012", name: "隆基绿能", market: SH}
+      - {code: "300274", name: "阳光电源", market: SZ}
+      - {code: "600905", name: "三峡能源", market: SH}
+      - {code: "002459", name: "晶澳科技", market: SZ}
+
+  新能源汽车:
+    keywords: [新能源汽车, 电动车, 动力电池, 锂电池, 充电桩, 智能驾驶, 自动驾驶]
+    stocks:
+      - {code: "300750", name: "宁德时代", market: SZ}
+      - {code: "002594", name: "比亚迪", market: SZ}
+      - {code: "688561", name: "奇安信", market: SH}
+
+  石油能源:
+    keywords: [石油, 原油, 油价, 天然气, 油气, 炼化, 霍尔木兹, OPEC]
+    stocks:
+      - {code: "601857", name: "中国石油", market: SH}
+      - {code: "600028", name: "中国石化", market: SH}
+      - {code: "600938", name: "中国海油", market: SH}
+
+  黄金:
+    keywords: [黄金, 金价, 贵金属, 央行购金]
+    stocks:
+      - {code: "600547", name: "山东黄金", market: SH}
+      - {code: "600489", name: "中金黄金", market: SH}
+      - {code: "002155", name: "湖南黄金", market: SZ}
+
+  军工:
+    keywords: [军工, 国防, 武器装备, 导弹, 战斗机, 军演, 军备, 航母]
+    stocks:
+      - {code: "600893", name: "航发动力", market: SH}
+      - {code: "600760", name: "中航沈飞", market: SH}
+      - {code: "002179", name: "中航光电", market: SZ}
+      - {code: "600862", name: "中航高科", market: SH}
+
+  农业:
+    keywords: [粮食, 种业, 农业, 耕地, 农产品, 夏收, 秋收, 粮食安全, 种子]
+    stocks:
+      - {code: "600598", name: "北大荒", market: SH}
+      - {code: "000998", name: "隆平高科", market: SZ}
+      - {code: "300498", name: "温氏股份", market: SZ}
+
+  消费:
+    keywords: [消费, 零售, 促消费, 商贸, 电商, 内需, 市场主体, 消费升级]
+    stocks:
+      - {code: "600519", name: "贵州茅台", market: SH}
+      - {code: "000858", name: "五粮液", market: SZ}
+      - {code: "601888", name: "中国中免", market: SH}
+
+  房地产:
+    keywords: [房地产, 楼市, 住房, 房价, 保障房, 城市更新, 棚改, 老旧小区]
+    stocks:
+      - {code: "001979", name: "招商蛇口", market: SZ}
+      - {code: "600048", name: "保利发展", market: SH}
+      - {code: "000002", name: "万科A", market: SZ}
+
+  数据要素:
+    keywords: [数据要素, 数据交易, 数据产品, 数字经济, 数据局, 数据资产]
+    stocks:
+      - {code: "603138", name: "海量数据", market: SH}
+      - {code: "300188", name: "美亚柏科", market: SZ}
+      - {code: "300451", name: "创业慧康", market: SZ}
+
+  外贸:
+    keywords: [出口, 进口, 外贸, 关税, 贸易, RCEP, 一带一路, 进博会, 广交会]
+    stocks:
+      - {code: "601872", name: "招商港口", market: SH}
+      - {code: "600018", name: "上港集团", market: SH}
+
+  银行金融:
+    keywords: [银行, 贷款, 利率, 降息, 降准, LPR, 信贷, 货币政策, 央行]
+    stocks:
+      - {code: "601398", name: "工商银行", market: SH}
+      - {code: "600036", name: "招商银行", market: SH}
+      - {code: "601166", name: "兴业银行", market: SH}
+
+  医药:
+    keywords: [医药, 医疗, 医保, 创新药, 生物医药, 中药, 医疗器械]
+    stocks:
+      - {code: "600276", name: "恒瑞医药", market: SH}
+      - {code: "000538", name: "云南白药", market: SZ}
+      - {code: "300760", name: "迈瑞医疗", market: SZ}
+
+  煤炭:
+    keywords: [煤炭, 煤矿, 煤电, 煤化工]
+    stocks:
+      - {code: "601088", name: "中国神华", market: SH}
+      - {code: "601898", name: "中煤能源", market: SH}
+
+  钢铁:
+    keywords: [钢铁, 钢材, 粗钢, 铁矿石]
+    stocks:
+      - {code: "600019", name: "宝钢股份", market: SH}
+      - {code: "000708", name: "中信特钢", market: SZ}
+
+# ============================================
+# 二、用词强度词库（判断政策所处阶段）
+# ============================================
+intensity_words:
+  # 阶段1：探索研究（早期信号）
+  early:
+    - 探索
+    - 研究
+    - 试点
+    - 调研
+    - 论证
+    - 前期
+    - 摸索
+    - 筹备
+    - 储备
+    - 规划
+
+  # 阶段2：积极推进（升温信号）
+  advancing:
+    - 推进
+    - 推动
+    - 加快
+    - 促进
+    - 落实
+    - 部署
+    - 组织实施
+    - 稳步
+    - 扎实推进
+    - 深入推进
+
+  # 阶段3：密集大力（主升浪信号）
+  intensive:
+    - 大力
+    - 全面
+    - 专项行动
+    - 攻坚
+    - 突破
+    - 加速
+    - 倍增
+    - 强力
+    - 集中
+    - 冲刺
+
+  # 阶段4：成果显现（利好出尽信号）
+  results:
+    - 成效显著
+    - 超额完成
+    - 圆满完成
+    - 历史性
+    - 里程碑
+    - 新突破
+    - 新成效
+    - 取得成果
+
+# ============================================
+# 三、经济判断关键词（判断新闻是否经济相关）
+# ============================================
+economy_keywords:
+  # 宏观经济
+  - GDP
+  - CPI
+  - PMI
+  - PPI
+  - 通胀
+  - 通缩
+  - 增长
+  - 下滑
+  - 回升
+  - 复苏
+
+  # 财政金融
+  - 财政
+  - 税收
+  - 减税
+  - 补贴
+  - 国债
+  - 专项债
+  - 预算
+  - 投资
+  - 融资
+  - 信贷
+
+  # 产业经济
+  - 产量
+  - 销量
+  - 出口额
+  - 进口额
+  - 营收
+  - 利润
+  - 产值
+  - 产能
+  - 订单
+  - 招投标
+
+  # 市场贸易
+  - 市场
+  - 消费
+  - 零售
+  - 外贸
+  - 进出口
+  - 贸易
+  - 关税
+
+  # 量词类（通常伴随经济数据）
+  - 万亿
+  - 千亿
+  - 百亿
+  - 亿元
+  - 万元
+  - 同比
+  - 环比
+  - 百分点
+
+# ============================================
+# 四、投资信号打分权重
+# ============================================
+scoring:
+  frequency_weight: 0.25      # 提及频率权重
+  acceleration_weight: 0.25   # 频率加速度权重
+  policy_level_weight: 0.20   # 政策级别权重
+  intensity_weight: 0.15      # 用词强度权重
+  first_mention_weight: 0.15  # 首次出现权重
+
+  # 政策级别分数
+  policy_levels:
+    国常会: 100
+    中央政治局: 95
+    国务院: 90
+    国家发改委: 80
+    工信部: 75
+    财政部: 75
+    央行: 75
+    其他部委: 60
+    地方政府: 40
+
+  # 用词强度分数
+  intensity_scores:
+    early: 30
+    advancing: 60
+    intensive: 100
+    results: 40

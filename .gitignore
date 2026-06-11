@@ -1,0 +1,7 @@
+# data/
+site/public/
+site/.hugo_build.lock
+__pycache__/
+*.pyc
+.DS_Store
+.venv/

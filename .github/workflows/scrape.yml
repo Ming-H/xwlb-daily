@@ -1,0 +1,59 @@
+name: Daily Scrape
+
+on:
+  schedule:
+    # 北京时间 21:45 = UTC 13:45
+    - cron: '45 13 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date to scrape (YYYYMMDD), empty for today'
+        required: false
+        default: ''
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install jieba pyyaml
+
+      - name: Run pipeline
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            python scraper/run_daily.py --date=${{ github.event.inputs.date }}
+          else
+            python scraper/run_daily.py --today
+          fi
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 0.155.0
+          extended: true
+
+      - name: Build Hugo
+        run: cd site && hugo --minify
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ site/content/
+          git diff --staged --quiet || git commit -m "📰 daily update $(date +%Y-%m-%d) [skip ci]"
+          git push
+
+  deploy:
+    needs: scrape
+    uses: ./.github/workflows/deploy.yml

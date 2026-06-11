@@ -1,0 +1,73 @@
+baseURL = 'https://ming-h.github.io/xwlb-daily/'
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-cn"
+title = '央视联播 · 投资参考'
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+summaryLength = 0
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[pagination]
+  pagerSize = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowToc = false
+  description = "新闻联播经济信号 · 辅助投资决策"
+
+  [params.homeInfoParams]
+    Title = "📺 央视联播 · 投资参考"
+    Content = "每日新闻联播经济信号追踪，捕捉投资机会"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Ming-H/xwlb-daily"
+
+[[menu.main]]
+  name = "首页"
+  weight = 1
+  url = "/"
+
+[[menu.main]]
+  name = "📰 每日新闻"
+  weight = 2
+  url = "/daily/"
+
+[[menu.main]]
+  name = "🔥 经济热点"
+  weight = 3
+  url = "/hotspots/"
+
+[[menu.main]]
+  name = "🗺️ 板块热力图"
+  weight = 4
+  url = "/sectors/"
+
+[[menu.main]]
+  name = "🚨 异动预警"
+  weight = 5
+  url = "/alerts/"
+
+[[menu.main]]
+  name = "📊 生命周期"
+  weight = 6
+  url = "/lifecycle/"
+
+[[menu.main]]
+  name = "📜 政策信号"
+  weight = 7
+  url = "/signals/"
