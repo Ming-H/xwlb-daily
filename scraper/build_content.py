@@ -53,9 +53,8 @@ total_count: {len(articles)}
 ---
 """
 
-    # Body
-    body = f"# 📺 新闻联播 · {date_fmt}\n\n"
-    body += f"共 **{len(articles)}** 条新闻，其中 **{economy_count}** 条经济相关\n\n"
+    # Body (Hugo already renders title from front matter, skip H1)
+    body = f"共 **{len(articles)}** 条新闻，其中 **{economy_count}** 条经济相关\n\n"
     body += "---\n\n"
 
     for art in articles:
