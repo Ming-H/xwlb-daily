@@ -132,7 +132,7 @@ layout: "alerts"
 ---
 """
 
-    body = f"# 🚨 异动预警 · {date_fmt}\n\n"
+    body = ""
 
     alerts = signals.get('alerts', [])
     if not alerts:
@@ -189,7 +189,7 @@ layout: "sectors"
 ---
 """
 
-    body = f"# 🗺️ 板块热力图 · {date_fmt}\n\n"
+    body = ""
 
     scores = signals.get('sector_scores', [])
     if not scores:
@@ -244,7 +244,7 @@ layout: "lifecycle"
 ---
 """
 
-    body = f"# 🔄 政策生命周期 · {date_fmt}\n\n"
+    body = ""
 
     lifecycles = signals.get('lifecycles', {})
     if not lifecycles:
@@ -283,7 +283,7 @@ def build_hotspots_page(date_str: str) -> bool:
     if not multi:
         return False
 
-    date_fmt = f"{date_str[:4]}年{int(date_str[4:6])}月{int(date_str[6:8])}月"
+    date_fmt = f"{date_str[:4]}年{int(date_str[4:6])}月{int(date_str[6:8])}日"
 
     fm = f"""---
 title: "🔥 经济热点 · {date_fmt}"
@@ -293,7 +293,7 @@ layout: "hotspots"
 ---
 """
 
-    body = f"# 🔥 经济热点 · {date_fmt}\n\n"
+    body = ""
 
     periods = multi.get('periods', {})
     period_names = {
@@ -353,7 +353,7 @@ layout: "home"
 ---
 """
 
-    body = f"# 📺 央视联播 · 投资参考\n\n"
+    body = ""
     body += f"**{date_fmt}** · 共 {total} 条新闻 · {economy_count} 条经济相关\n\n"
 
     # 预警摘要
