@@ -1,35 +1,113 @@
 {
-  "date": "20260612",
+  "date": "20260613",
   "alerts": [
     {
       "type": "突发升温",
       "level": "red",
+      "sector": "AI人工智能",
+      "detail": "上周0次→本周11次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "AI人工智能",
+      "detail": "连续3天出现"
+    },
+    {
+      "type": "突发升温",
+      "level": "red",
       "sector": "基建投资",
-      "detail": "上周0次→本周7次"
+      "detail": "上周0次→本周12次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "基建投资",
+      "detail": "连续3天出现"
+    },
+    {
+      "type": "突发升温",
+      "level": "red",
+      "sector": "消费",
+      "detail": "上周0次→本周10次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "消费",
+      "detail": "连续3天出现"
+    },
+    {
+      "type": "突发升温",
+      "level": "red",
+      "sector": "银行金融",
+      "detail": "上周0次→本周9次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "银行金融",
+      "detail": "连续3天出现"
     },
     {
       "type": "突发升温",
       "level": "red",
       "sector": "新能源",
-      "detail": "上周0次→本周7次"
+      "detail": "上周0次→本周10次"
     },
     {
-      "type": "突发升温",
-      "level": "red",
-      "sector": "石油能源",
-      "detail": "上周0次→本周7次"
-    },
-    {
-      "type": "突发升温",
-      "level": "red",
-      "sector": "AI人工智能",
-      "detail": "上周0次→本周5次"
+      "type": "持续升温",
+      "level": "green",
+      "sector": "新能源",
+      "detail": "连续3天出现"
     },
     {
       "type": "突发升温",
       "level": "red",
       "sector": "数据要素",
-      "detail": "上周0次→本周3次"
+      "detail": "上周0次→本周4次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "数据要素",
+      "detail": "连续3天出现"
+    },
+    {
+      "type": "突发升温",
+      "level": "red",
+      "sector": "农业",
+      "detail": "上周0次→本周9次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "农业",
+      "detail": "连续3天出现"
+    },
+    {
+      "type": "突发升温",
+      "level": "red",
+      "sector": "石油能源",
+      "detail": "上周0次→本周10次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "石油能源",
+      "detail": "连续3天出现"
+    },
+    {
+      "type": "突发升温",
+      "level": "red",
+      "sector": "军工",
+      "detail": "上周0次→本周5次"
+    },
+    {
+      "type": "持续升温",
+      "level": "green",
+      "sector": "军工",
+      "detail": "连续3天出现"
     },
     {
       "type": "突发升温",
@@ -40,38 +118,14 @@
     {
       "type": "突发升温",
       "level": "red",
-      "sector": "消费",
-      "detail": "上周0次→本周9次"
-    },
-    {
-      "type": "突发升温",
-      "level": "red",
       "sector": "房地产",
       "detail": "上周0次→本周3次"
     },
     {
       "type": "突发升温",
       "level": "red",
-      "sector": "银行金融",
-      "detail": "上周0次→本周8次"
-    },
-    {
-      "type": "突发升温",
-      "level": "red",
-      "sector": "农业",
-      "detail": "上周0次→本周8次"
-    },
-    {
-      "type": "突发升温",
-      "level": "red",
       "sector": "机器人",
       "detail": "上周0次→本周5次"
-    },
-    {
-      "type": "突发升温",
-      "level": "red",
-      "sector": "军工",
-      "detail": "上周0次→本周3次"
     },
     {
       "type": "突发升温",
@@ -84,80 +138,11 @@
       "level": "red",
       "sector": "地下管网",
       "detail": "上周0次→本周4次"
-    },
-    {
-      "type": "首次密集",
-      "level": "yellow",
-      "keyword": "增长",
-      "detail": "单日出现4次，近2周首次"
-    },
-    {
-      "type": "首次密集",
-      "level": "yellow",
-      "keyword": "亿元",
-      "detail": "单日出现5次，近2周首次"
-    },
-    {
-      "type": "首次密集",
-      "level": "yellow",
-      "keyword": "万亿",
-      "detail": "单日出现3次，近2周首次"
-    },
-    {
-      "type": "首次密集",
-      "level": "yellow",
-      "keyword": "消费",
-      "detail": "单日出现3次，近2周首次"
     }
   ],
   "sector_scores": [
     {
-      "sector": "农业",
-      "score": 98,
-      "week_count": 8,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "国务院",
-      "intensity_level": "intensive",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "600598",
-          "name": "北大荒",
-          "market": "SH"
-        },
-        {
-          "code": "000998",
-          "name": "隆平高科",
-          "market": "SZ"
-        },
-        {
-          "code": "300498",
-          "name": "温氏股份",
-          "market": "SZ"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260612",
-          "title": "[视频]【在希望的田野上】全国小麦收获过八成 夏播进入高峰"
-        },
-        {
-          "date": "20260612",
-          "title": "[视频]【一线调研】织密全域物流网 畅通经济大动脉"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]我国开展东西部协作30年 成效显著"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]【党旗在基层一线高高飘扬】徐淙祥：多种粮 种好粮"
-        }
-      ]
-    },
-    {
-      "sector": "AI人工智能",
+      "sector": "机器人",
       "score": 98,
       "week_count": 5,
       "prev_count": 0,
@@ -167,34 +152,30 @@
       "is_first": true,
       "stocks": [
         {
-          "code": "002230",
-          "name": "科大讯飞",
-          "market": "SZ"
-        },
-        {
-          "code": "688787",
-          "name": "海天瑞声",
+          "code": "601689",
+          "name": "拓普集团",
           "market": "SH"
         },
         {
-          "code": "300454",
-          "name": "深信服",
+          "code": "688017",
+          "name": "绿的谐波",
+          "market": "SH"
+        },
+        {
+          "code": "002747",
+          "name": "埃斯顿",
           "market": "SZ"
         },
         {
-          "code": "688041",
-          "name": "海光信息",
-          "market": "SH"
+          "code": "300124",
+          "name": "汇川技术",
+          "market": "SZ"
         }
       ],
       "trigger_articles": [
         {
           "date": "20260612",
-          "title": "[视频]赵乐际同新加坡国会议长会谈"
-        },
-        {
-          "date": "20260612",
-          "title": "[视频]【凝心聚力 真抓实干 奋力实现“十五五”良好开局】科技赋能福建新能源产业建设 云南加快推进“绿电+先进制造”深度融合"
+          "title": "[视频]【一线调研】织密全域物流网 畅通经济大动脉"
         },
         {
           "date": "20260611",
@@ -209,7 +190,7 @@
     {
       "sector": "消费",
       "score": 98,
-      "week_count": 9,
+      "week_count": 10,
       "prev_count": 0,
       "trend": "NEW",
       "policy_level": "国务院",
@@ -234,6 +215,10 @@
       ],
       "trigger_articles": [
         {
+          "date": "20260613",
+          "title": "[视频]多项措施促进铁路与旅游融合发展"
+        },
+        {
           "date": "20260612",
           "title": "[视频]【凝心聚力 真抓实干 奋力实现“十五五”良好开局】科技赋能福建新能源产业建设 云南加快推进“绿电+先进制造”深度融合"
         },
@@ -248,10 +233,6 @@
         {
           "date": "20260612",
           "title": "[视频]我国不断完善以失能老人照护为重点的基本养老服务体系"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]【树立和践行正确政绩观】实干担当促发展 推动学习教育见行见效"
         }
       ]
     },
@@ -300,13 +281,54 @@
       ]
     },
     {
-      "sector": "基建投资",
-      "score": 98,
-      "week_count": 7,
+      "sector": "数据要素",
+      "score": 93,
+      "week_count": 4,
       "prev_count": 0,
       "trend": "NEW",
       "policy_level": "国务院",
       "intensity_level": "intensive",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "603138",
+          "name": "海量数据",
+          "market": "SH"
+        },
+        {
+          "code": "300188",
+          "name": "美亚柏科",
+          "market": "SZ"
+        },
+        {
+          "code": "300451",
+          "name": "创业慧康",
+          "market": "SZ"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260613",
+          "title": "[视频]【一线调研】算力网织就数字经济新底座"
+        },
+        {
+          "date": "20260612",
+          "title": "[视频]赵乐际同新加坡国会议长会谈"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]国内联播快讯"
+        }
+      ]
+    },
+    {
+      "sector": "基建投资",
+      "score": 89,
+      "week_count": 12,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "国务院",
+      "intensity_level": "results",
       "is_first": true,
       "stocks": [
         {
@@ -332,159 +354,35 @@
       ],
       "trigger_articles": [
         {
-          "date": "20260612",
-          "title": "[视频]【牢记初心使命 奋进复兴征程】跨越时空的井冈山精神照亮革命老区高质量发展新路"
+          "date": "20260613",
+          "title": "[视频]我国海洋生态保护修复取得新成效"
         },
         {
-          "date": "20260612",
-          "title": "[视频]市场监管总局等部门约谈7家涉火车票销售第三方平台"
+          "date": "20260613",
+          "title": "[视频]多项措施促进铁路与旅游融合发展"
         },
         {
-          "date": "20260612",
-          "title": "[视频]【一线调研】织密全域物流网 畅通经济大动脉"
+          "date": "20260613",
+          "title": "[视频]【一线调研】算力网织就数字经济新底座"
         },
         {
-          "date": "20260612",
-          "title": "[视频]美称美伊或将签署协议 伊称美方不断改变立场影响进程"
-        },
-        {
-          "date": "20260612",
-          "title": "[视频]国际联播快讯"
-        }
-      ]
-    },
-    {
-      "sector": "机器人",
-      "score": 98,
-      "week_count": 5,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "国务院",
-      "intensity_level": "intensive",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "601689",
-          "name": "拓普集团",
-          "market": "SH"
-        },
-        {
-          "code": "688017",
-          "name": "绿的谐波",
-          "market": "SH"
-        },
-        {
-          "code": "002747",
-          "name": "埃斯顿",
-          "market": "SZ"
-        },
-        {
-          "code": "300124",
-          "name": "汇川技术",
-          "market": "SZ"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260612",
-          "title": "[视频]【一线调研】织密全域物流网 畅通经济大动脉"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]【一线调研】筑牢地下管网 让城市“里子”更扎实"
-        },
-        {
-          "date": "20260611",
+          "date": "20260613",
           "title": "[视频]国内联播快讯"
-        }
-      ]
-    },
-    {
-      "sector": "数据要素",
-      "score": 88,
-      "week_count": 3,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "国务院",
-      "intensity_level": "intensive",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "603138",
-          "name": "海量数据",
-          "market": "SH"
         },
-        {
-          "code": "300188",
-          "name": "美亚柏科",
-          "market": "SZ"
-        },
-        {
-          "code": "300451",
-          "name": "创业慧康",
-          "market": "SZ"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260612",
-          "title": "[视频]赵乐际同新加坡国会议长会谈"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]国内联播快讯"
-        }
-      ]
-    },
-    {
-      "sector": "石油能源",
-      "score": 86,
-      "week_count": 7,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "",
-      "intensity_level": "intensive",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "601857",
-          "name": "中国石油",
-          "market": "SH"
-        },
-        {
-          "code": "600028",
-          "name": "中国石化",
-          "market": "SH"
-        },
-        {
-          "code": "600938",
-          "name": "中国海油",
-          "market": "SH"
-        }
-      ],
-      "trigger_articles": [
         {
           "date": "20260612",
           "title": "[视频]【牢记初心使命 奋进复兴征程】跨越时空的井冈山精神照亮革命老区高质量发展新路"
-        },
-        {
-          "date": "20260612",
-          "title": "[视频]美称美伊或将签署协议 伊称美方不断改变立场影响进程"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
         }
       ]
     },
     {
       "sector": "新能源",
-      "score": 86,
-      "week_count": 7,
+      "score": 89,
+      "week_count": 10,
       "prev_count": 0,
       "trend": "NEW",
-      "policy_level": "",
-      "intensity_level": "intensive",
+      "policy_level": "国务院",
+      "intensity_level": "results",
       "is_first": true,
       "stocks": [
         {
@@ -510,6 +408,14 @@
       ],
       "trigger_articles": [
         {
+          "date": "20260613",
+          "title": "[视频]【一线调研】算力网织就数字经济新底座"
+        },
+        {
+          "date": "20260613",
+          "title": "[视频]国内联播快讯"
+        },
+        {
           "date": "20260612",
           "title": "[视频]【牢记初心使命 奋进复兴征程】跨越时空的井冈山精神照亮革命老区高质量发展新路"
         },
@@ -520,6 +426,43 @@
         {
           "date": "20260612",
           "title": "[视频]【凝心聚力 真抓实干 奋力实现“十五五”良好开局】科技赋能福建新能源产业建设 云南加快推进“绿电+先进制造”深度融合"
+        }
+      ]
+    },
+    {
+      "sector": "农业",
+      "score": 89,
+      "week_count": 9,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "国务院",
+      "intensity_level": "results",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "600598",
+          "name": "北大荒",
+          "market": "SH"
+        },
+        {
+          "code": "000998",
+          "name": "隆平高科",
+          "market": "SZ"
+        },
+        {
+          "code": "300498",
+          "name": "温氏股份",
+          "market": "SZ"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260613",
+          "title": "[视频]国内联播快讯"
+        },
+        {
+          "date": "20260612",
+          "title": "[视频]【在希望的田野上】全国小麦收获过八成 夏播进入高峰"
         },
         {
           "date": "20260612",
@@ -527,7 +470,164 @@
         },
         {
           "date": "20260611",
-          "title": "[视频]前5个月我国工程机械海内外市场快速增长"
+          "title": "[视频]我国开展东西部协作30年 成效显著"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]【党旗在基层一线高高飘扬】徐淙祥：多种粮 种好粮"
+        }
+      ]
+    },
+    {
+      "sector": "AI人工智能",
+      "score": 89,
+      "week_count": 11,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "国务院",
+      "intensity_level": "results",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "002230",
+          "name": "科大讯飞",
+          "market": "SZ"
+        },
+        {
+          "code": "688787",
+          "name": "海天瑞声",
+          "market": "SH"
+        },
+        {
+          "code": "300454",
+          "name": "深信服",
+          "market": "SZ"
+        },
+        {
+          "code": "688041",
+          "name": "海光信息",
+          "market": "SH"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260613",
+          "title": "[视频]【新思想引领新征程】守护文化瑰宝 赓续中华文脉"
+        },
+        {
+          "date": "20260613",
+          "title": "[视频]【一线调研】算力网织就数字经济新底座"
+        },
+        {
+          "date": "20260613",
+          "title": "[视频]国内联播快讯"
+        },
+        {
+          "date": "20260612",
+          "title": "[视频]赵乐际同新加坡国会议长会谈"
+        },
+        {
+          "date": "20260612",
+          "title": "[视频]【凝心聚力 真抓实干 奋力实现“十五五”良好开局】科技赋能福建新能源产业建设 云南加快推进“绿电+先进制造”深度融合"
+        }
+      ]
+    },
+    {
+      "sector": "石油能源",
+      "score": 86,
+      "week_count": 10,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "",
+      "intensity_level": "intensive",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "601857",
+          "name": "中国石油",
+          "market": "SH"
+        },
+        {
+          "code": "600028",
+          "name": "中国石化",
+          "market": "SH"
+        },
+        {
+          "code": "600938",
+          "name": "中国海油",
+          "market": "SH"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260613",
+          "title": "[视频]伊朗外长披露伊美谅解备忘录草案部分内容"
+        },
+        {
+          "date": "20260613",
+          "title": "[视频]国际联播快讯"
+        },
+        {
+          "date": "20260612",
+          "title": "[视频]【牢记初心使命 奋进复兴征程】跨越时空的井冈山精神照亮革命老区高质量发展新路"
+        },
+        {
+          "date": "20260612",
+          "title": "[视频]美称美伊或将签署协议 伊称美方不断改变立场影响进程"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
+        }
+      ]
+    },
+    {
+      "sector": "军工",
+      "score": 86,
+      "week_count": 5,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "",
+      "intensity_level": "intensive",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "600893",
+          "name": "航发动力",
+          "market": "SH"
+        },
+        {
+          "code": "600760",
+          "name": "中航沈飞",
+          "market": "SH"
+        },
+        {
+          "code": "002179",
+          "name": "中航光电",
+          "market": "SZ"
+        },
+        {
+          "code": "600862",
+          "name": "中航高科",
+          "market": "SH"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260613",
+          "title": "[视频]伊朗外长披露伊美谅解备忘录草案部分内容"
+        },
+        {
+          "date": "20260613",
+          "title": "[视频]国际联播快讯"
+        },
+        {
+          "date": "20260612",
+          "title": "[视频]美称美伊或将签署协议 伊称美方不断改变立场影响进程"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
         }
       ]
     },
@@ -571,7 +671,7 @@
     {
       "sector": "银行金融",
       "score": 84,
-      "week_count": 8,
+      "week_count": 9,
       "prev_count": 0,
       "trend": "NEW",
       "policy_level": "央行",
@@ -595,6 +695,10 @@
         }
       ],
       "trigger_articles": [
+        {
+          "date": "20260613",
+          "title": "[视频]各地推动人才下乡 助力乡村振兴"
+        },
         {
           "date": "20260612",
           "title": "[视频]5月末社会融资规模存量458.81万亿元"
@@ -648,48 +752,6 @@
       ]
     },
     {
-      "sector": "军工",
-      "score": 76,
-      "week_count": 3,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "",
-      "intensity_level": "intensive",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "600893",
-          "name": "航发动力",
-          "market": "SH"
-        },
-        {
-          "code": "600760",
-          "name": "中航沈飞",
-          "market": "SH"
-        },
-        {
-          "code": "002179",
-          "name": "中航光电",
-          "market": "SZ"
-        },
-        {
-          "code": "600862",
-          "name": "中航高科",
-          "market": "SH"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260612",
-          "title": "[视频]美称美伊或将签署协议 伊称美方不断改变立场影响进程"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
-        }
-      ]
-    },
-    {
       "sector": "新能源汽车",
       "score": 71,
       "week_count": 2,
@@ -723,43 +785,6 @@
         {
           "date": "20260612",
           "title": "[视频]【凝心聚力 真抓实干 奋力实现“十五五”良好开局】科技赋能福建新能源产业建设 云南加快推进“绿电+先进制造”深度融合"
-        }
-      ]
-    },
-    {
-      "sector": "黄金",
-      "score": 62,
-      "week_count": 2,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "",
-      "intensity_level": "results",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "600547",
-          "name": "山东黄金",
-          "market": "SH"
-        },
-        {
-          "code": "600489",
-          "name": "中金黄金",
-          "market": "SH"
-        },
-        {
-          "code": "002155",
-          "name": "湖南黄金",
-          "market": "SZ"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260611",
-          "title": "[视频]电视专题片《续写中朝传统友谊崭新篇章——习近平总书记访问朝鲜纪实》今晚播出"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
         }
       ]
     },
@@ -800,11 +825,48 @@
           "title": "[视频]前5个月我国工程机械海内外市场快速增长"
         }
       ]
+    },
+    {
+      "sector": "黄金",
+      "score": 62,
+      "week_count": 2,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "",
+      "intensity_level": "results",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "600547",
+          "name": "山东黄金",
+          "market": "SH"
+        },
+        {
+          "code": "600489",
+          "name": "中金黄金",
+          "market": "SH"
+        },
+        {
+          "code": "002155",
+          "name": "湖南黄金",
+          "market": "SZ"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260611",
+          "title": "[视频]电视专题片《续写中朝传统友谊崭新篇章——习近平总书记访问朝鲜纪实》今晚播出"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
+        }
+      ]
     }
   ],
   "lifecycles": {
-    "农业": {
-      "keyword": "农业",
+    "机器人": {
+      "keyword": "机器人",
       "stage": "积极推进",
       "stage_code": 2,
       "timeline": [
@@ -817,26 +879,11 @@
           "date": "20260612",
           "hit": true,
           "intensity": "intensive"
-        }
-      ],
-      "first_seen": "20260611",
-      "hit_count": 2,
-      "recent_hit_count": 2
-    },
-    "AI人工智能": {
-      "keyword": "AI人工智能",
-      "stage": "积极推进",
-      "stage_code": 2,
-      "timeline": [
-        {
-          "date": "20260611",
-          "hit": true,
-          "intensity": "intensive"
         },
         {
-          "date": "20260612",
-          "hit": true,
-          "intensity": "intensive"
+          "date": "20260613",
+          "hit": false,
+          "intensity": "none"
         }
       ],
       "first_seen": "20260611",
@@ -845,8 +892,8 @@
     },
     "消费": {
       "keyword": "消费",
-      "stage": "积极推进",
-      "stage_code": 2,
+      "stage": "密集政策期",
+      "stage_code": 3,
       "timeline": [
         {
           "date": "20260611",
@@ -857,11 +904,16 @@
           "date": "20260612",
           "hit": true,
           "intensity": "intensive"
+        },
+        {
+          "date": "20260613",
+          "hit": true,
+          "intensity": "intensive"
         }
       ],
       "first_seen": "20260611",
-      "hit_count": 2,
-      "recent_hit_count": 2
+      "hit_count": 3,
+      "recent_hit_count": 3
     },
     "外贸": {
       "keyword": "外贸",
@@ -877,16 +929,21 @@
           "date": "20260612",
           "hit": true,
           "intensity": "intensive"
+        },
+        {
+          "date": "20260613",
+          "hit": false,
+          "intensity": "none"
         }
       ],
       "first_seen": "20260611",
       "hit_count": 2,
       "recent_hit_count": 2
     },
-    "基建投资": {
-      "keyword": "基建投资",
-      "stage": "积极推进",
-      "stage_code": 2,
+    "数据要素": {
+      "keyword": "数据要素",
+      "stage": "密集政策期",
+      "stage_code": 3,
       "timeline": [
         {
           "date": "20260611",
@@ -897,11 +954,41 @@
           "date": "20260612",
           "hit": true,
           "intensity": "intensive"
+        },
+        {
+          "date": "20260613",
+          "hit": true,
+          "intensity": "intensive"
         }
       ],
       "first_seen": "20260611",
-      "hit_count": 2,
-      "recent_hit_count": 2
+      "hit_count": 3,
+      "recent_hit_count": 3
+    },
+    "基建投资": {
+      "keyword": "基建投资",
+      "stage": "密集政策期",
+      "stage_code": 3,
+      "timeline": [
+        {
+          "date": "20260611",
+          "hit": true,
+          "intensity": "intensive"
+        },
+        {
+          "date": "20260612",
+          "hit": true,
+          "intensity": "intensive"
+        },
+        {
+          "date": "20260613",
+          "hit": true,
+          "intensity": "intensive"
+        }
+      ],
+      "first_seen": "20260611",
+      "hit_count": 3,
+      "recent_hit_count": 3
     }
   }
 }
