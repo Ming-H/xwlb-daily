@@ -1,6 +1,6 @@
 ---
-title: "异动预警 · 2026年6月17日"
-date: "2026-06-17"
+title: "异动预警 · 2026年6月18日"
+date: "2026-06-18"
 draft: false
 layout: "alerts"
 ---
@@ -9,31 +9,16 @@ layout: "alerts"
 <p class="lead">关键词出现频率突然飙升，可能预示板块异动</p>
 
 <ul class="signals">
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">外贸</span><span class="sig-detail">上周0次 → 本周14次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">银行金融</span><span class="sig-detail">上周0次 → 本周12次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">消费</span><span class="sig-detail">上周0次 → 本周16次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">农业</span><span class="sig-detail">上周0次 → 本周20次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">基建投资</span><span class="sig-detail">上周0次 → 本周20次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">石油能源</span><span class="sig-detail">上周0次 → 本周15次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">房地产</span><span class="sig-detail">上周0次 → 本周8次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">数据要素</span><span class="sig-detail">上周0次 → 本周7次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">地下管网</span><span class="sig-detail">上周0次 → 本周5次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">AI人工智能</span><span class="sig-detail">上周0次 → 本周15次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">新能源</span><span class="sig-detail">上周0次 → 本周13次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">军工</span><span class="sig-detail">上周0次 → 本周8次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">机器人</span><span class="sig-detail">上周0次 → 本周5次</span></li>
-  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">工程机械</span><span class="sig-detail">上周0次 → 本周3次</span></li>
-</ul>
-
-## 首次密集
-
-<p class="lead">关键词首次在单日密集出现，新政策信号</p>
-
-<ul class="signals">
-  <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">投资</span><span class="sig-detail">单日出现3次，近2周首次</span></li>
-  <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">贸易</span><span class="sig-detail">单日出现3次，近2周首次</span></li>
-  <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">市场</span><span class="sig-detail">单日出现5次，近2周首次</span></li>
-  <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">增长</span><span class="sig-detail">单日出现3次，近2周首次</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">AI人工智能</span><span class="sig-detail">上周3次 → 本周16次 (×5.3)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">新能源</span><span class="sig-detail">上周1次 → 本周14次 (×14.0)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">新能源汽车</span><span class="sig-detail">上周0次 → 本周4次</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">银行金融</span><span class="sig-detail">上周1次 → 本周17次 (×17.0)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">房地产</span><span class="sig-detail">上周2次 → 本周9次 (×4.5)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">基建投资</span><span class="sig-detail">上周1次 → 本周25次 (×25.0)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">外贸</span><span class="sig-detail">上周3次 → 本周15次 (×5.0)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">石油能源</span><span class="sig-detail">上周3次 → 本周17次 (×5.7)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">军工</span><span class="sig-detail">上周2次 → 本周9次 (×4.5)</span></li>
+  <li class="sig" data-lvl="red"><span class="dot" data-lvl="red" aria-hidden="true"></span><span class="sig-name">农业</span><span class="sig-detail">上周5次 → 本周17次 (×3.4)</span></li>
 </ul>
 
 ## 持续升温
@@ -41,9 +26,17 @@ layout: "alerts"
 <p class="lead">关键词连续多天出现，政策持续关注</p>
 
 <ul class="signals">
-  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">消费</span><span class="sig-detail">连续6天出现</span></li>
-  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">农业</span><span class="sig-detail">连续6天出现</span></li>
-  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">基建投资</span><span class="sig-detail">连续6天出现</span></li>
-  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">石油能源</span><span class="sig-detail">连续6天出现</span></li>
+  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">银行金融</span><span class="sig-detail">连续3天出现</span></li>
+  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">基建投资</span><span class="sig-detail">连续7天出现</span></li>
+  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">外贸</span><span class="sig-detail">连续4天出现</span></li>
+  <li class="sig" data-lvl="green"><span class="dot" data-lvl="green" aria-hidden="true"></span><span class="sig-name">石油能源</span><span class="sig-detail">连续7天出现</span></li>
+</ul>
+
+## 消失预警
+
+<p class="lead">之前高频关键词消失，关注度转移</p>
+
+<ul class="signals">
+  <li class="sig" data-lvl="white"><span class="dot" data-lvl="white" aria-hidden="true"></span><span class="sig-name">工程机械</span><span class="sig-detail">前2周出现3次，近7天0次</span></li>
 </ul>
 
