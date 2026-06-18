@@ -5,7 +5,9 @@
 """
 import re
 import json
+import time
 import urllib.request
+import urllib.error
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -15,11 +17,20 @@ HEADERS = {
 DATA_DIR = Path(__file__).parent.parent / "data" / "daily"
 
 
-def fetch(url: str, timeout: int = 15) -> str:
-    """HTTP GET 请求"""
-    req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return resp.read().decode('utf-8', errors='ignore')
+def fetch(url: str, timeout: int = 20, retries: int = 3):
+    """HTTP GET 请求，带重试与超时；全部失败时返回 None（不抛异常）。"""
+    last = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read().decode('utf-8', errors='ignore')
+        except Exception as e:
+            last = e
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt)  # 指数退避：1s, 2s
+    print(f'  ⚠️ 网络请求失败（{retries} 次重试后）: {type(last).__name__}: {str(last)[:80]}')
+    return None
 
 
 def fetch_daily_list(date_str: str) -> list[dict]:
@@ -30,6 +41,8 @@ def fetch_daily_list(date_str: str) -> list[dict]:
     """
     url = f'https://tv.cctv.com/lm/xwlb/day/{date_str}.shtml'
     html = fetch(url)
+    if not html:
+        return []
 
     # 先提取所有文章链接，去重
     articles = []
@@ -61,6 +74,8 @@ def fetch_daily_list(date_str: str) -> list[dict]:
 def fetch_article_detail(url: str) -> dict:
     """抓取单条新闻的详情"""
     html = fetch(url)
+    if not html:
+        return {'title': '', 'text': '', 'guid': '', 'duration': ''}
 
     # 提取 content_area 文字
     content_match = re.search(
