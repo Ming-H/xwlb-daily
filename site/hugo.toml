@@ -29,8 +29,11 @@ ignoreLogs = ['warning-goldmark-raw-html']
   ShowToc = false
   description = "新闻联播经济信号辅助投资决策"
 
+  [params.assets]
+    favicon = "favicon.svg"
+
   [params.homeInfoParams]
-    Title = "📺 央视联播 · 投资参考"
+    Title = "央视联播投资参考"
     Content = "每日新闻联播经济信号追踪，捕捉投资机会"
 
 [[params.socialIcons]]
@@ -43,26 +46,26 @@ ignoreLogs = ['warning-goldmark-raw-html']
   url = "/"
 
 [[menu.main]]
-  name = "📰 每日新闻"
+  name = "每日新闻"
   weight = 2
   url = "/daily/"
 
 [[menu.main]]
-  name = "🔥 经济热点"
+  name = "经济热点"
   weight = 3
   url = "/hotspots/"
 
 [[menu.main]]
-  name = "🗺️ 板块热力图"
+  name = "板块热力"
   weight = 4
   url = "/sectors/"
 
 [[menu.main]]
-  name = "🚨 异动预警"
+  name = "异动预警"
   weight = 5
   url = "/alerts/"
 
 [[menu.main]]
-  name = "🔄 生命周期"
+  name = "生命周期"
   weight = 6
   url = "/lifecycle/"

@@ -1,118 +1,118 @@
 ---
-title: "🔥 经济热点 · 2026年6月17日"
+title: "经济热点 · 2026年6月17日"
 date: "2026-06-17"
 draft: false
 layout: "hotspots"
 ---
 ## 今日热点
 
-*当日出现的经济关键词*
+<p class="lead">当日出现的经济关键词</p>
 
 | 排名 | 关键词 | 出现次数 |
 |:----:|:-------|:--------:|
-| 1 | **市场** | 3 |
-| 2 | **投资** | 2 |
-| 3 | **融资** | 2 |
-| 4 | **财政** | 2 |
-| 5 | **产量** | 1 |
-| 6 | **国债** | 1 |
-| 7 | **补贴** | 1 |
-| 8 | **亿元** | 1 |
+| 1 | **市场** | <span class="score-inline">3</span> |
+| 2 | **投资** | <span class="score-inline">2</span> |
+| 3 | **融资** | <span class="score-inline">2</span> |
+| 4 | **财政** | <span class="score-inline">2</span> |
+| 5 | **产量** | <span class="score-inline">1</span> |
+| 6 | **国债** | <span class="score-inline">1</span> |
+| 7 | **补贴** | <span class="score-inline">1</span> |
+| 8 | **亿元** | <span class="score-inline">1</span> |
 
-**涉及板块**: 银行金融(4) · AI人工智能(3) · 石油能源(3) · 农业(2) · 军工(2) · 基建投资(2) · 房地产(1) · 外贸(1)
+<div class="sectors-row"><i>涉及板块</i><span class="chip">银行金融<b>4</b></span><span class="chip">AI人工智能<b>3</b></span><span class="chip">石油能源<b>3</b></span><span class="chip">农业<b>2</b></span><span class="chip">军工<b>2</b></span><span class="chip">基建投资<b>2</b></span><span class="chip">房地产<b>1</b></span><span class="chip">外贸<b>1</b></span></div>
 
 ---
 
 ## 本周热点
 
-*近 7 天高频关键词*
+<p class="lead">近 7 天高频关键词</p>
 
 | 排名 | 关键词 | 出现次数 |
 |:----:|:-------|:--------:|
-| 1 | **市场** | 18 |
-| 2 | **亿元** | 14 |
-| 3 | **增长** | 13 |
-| 4 | **投资** | 12 |
-| 5 | **消费** | 12 |
-| 6 | **同比** | 10 |
-| 7 | **贸易** | 7 |
-| 8 | **万亿** | 7 |
-| 9 | **财政** | 6 |
-| 10 | **万元** | 4 |
-| 11 | **融资** | 3 |
-| 12 | **补贴** | 3 |
-| 13 | **预算** | 3 |
-| 14 | **外贸** | 3 |
-| 15 | **国债** | 2 |
-| 16 | **进出口** | 2 |
-| 17 | **产值** | 2 |
-| 18 | **GDP** | 2 |
-| 19 | **产量** | 1 |
-| 20 | **税收** | 1 |
+| 1 | **市场** | <span class="score-inline">18</span> |
+| 2 | **亿元** | <span class="score-inline">14</span> |
+| 3 | **增长** | <span class="score-inline">13</span> |
+| 4 | **投资** | <span class="score-inline">12</span> |
+| 5 | **消费** | <span class="score-inline">12</span> |
+| 6 | **同比** | <span class="score-inline">10</span> |
+| 7 | **贸易** | <span class="score-inline">7</span> |
+| 8 | **万亿** | <span class="score-inline">7</span> |
+| 9 | **财政** | <span class="score-inline">6</span> |
+| 10 | **万元** | <span class="score-inline">4</span> |
+| 11 | **融资** | <span class="score-inline">3</span> |
+| 12 | **补贴** | <span class="score-inline">3</span> |
+| 13 | **预算** | <span class="score-inline">3</span> |
+| 14 | **外贸** | <span class="score-inline">3</span> |
+| 15 | **国债** | <span class="score-inline">2</span> |
+| 16 | **进出口** | <span class="score-inline">2</span> |
+| 17 | **产值** | <span class="score-inline">2</span> |
+| 18 | **GDP** | <span class="score-inline">2</span> |
+| 19 | **产量** | <span class="score-inline">1</span> |
+| 20 | **税收** | <span class="score-inline">1</span> |
 
-**涉及板块**: 农业(22) · 基建投资(22) · AI人工智能(18) · 石油能源(18) · 银行金融(16) · 消费(16) · 外贸(15) · 新能源(13)
+<div class="sectors-row"><i>涉及板块</i><span class="chip">农业<b>22</b></span><span class="chip">基建投资<b>22</b></span><span class="chip">AI人工智能<b>18</b></span><span class="chip">石油能源<b>18</b></span><span class="chip">银行金融<b>16</b></span><span class="chip">消费<b>16</b></span><span class="chip">外贸<b>15</b></span><span class="chip">新能源<b>13</b></span></div>
 
 ---
 
 ## 本月热点
 
-*近 30 天趋势*
+<p class="lead">近 30 天趋势</p>
 
 | 排名 | 关键词 | 出现次数 |
 |:----:|:-------|:--------:|
-| 1 | **市场** | 18 |
-| 2 | **亿元** | 14 |
-| 3 | **增长** | 13 |
-| 4 | **投资** | 12 |
-| 5 | **消费** | 12 |
-| 6 | **同比** | 10 |
-| 7 | **贸易** | 7 |
-| 8 | **万亿** | 7 |
-| 9 | **财政** | 6 |
-| 10 | **万元** | 4 |
-| 11 | **融资** | 3 |
-| 12 | **补贴** | 3 |
-| 13 | **预算** | 3 |
-| 14 | **外贸** | 3 |
-| 15 | **国债** | 2 |
-| 16 | **进出口** | 2 |
-| 17 | **产值** | 2 |
-| 18 | **GDP** | 2 |
-| 19 | **产量** | 1 |
-| 20 | **税收** | 1 |
+| 1 | **市场** | <span class="score-inline">18</span> |
+| 2 | **亿元** | <span class="score-inline">14</span> |
+| 3 | **增长** | <span class="score-inline">13</span> |
+| 4 | **投资** | <span class="score-inline">12</span> |
+| 5 | **消费** | <span class="score-inline">12</span> |
+| 6 | **同比** | <span class="score-inline">10</span> |
+| 7 | **贸易** | <span class="score-inline">7</span> |
+| 8 | **万亿** | <span class="score-inline">7</span> |
+| 9 | **财政** | <span class="score-inline">6</span> |
+| 10 | **万元** | <span class="score-inline">4</span> |
+| 11 | **融资** | <span class="score-inline">3</span> |
+| 12 | **补贴** | <span class="score-inline">3</span> |
+| 13 | **预算** | <span class="score-inline">3</span> |
+| 14 | **外贸** | <span class="score-inline">3</span> |
+| 15 | **国债** | <span class="score-inline">2</span> |
+| 16 | **进出口** | <span class="score-inline">2</span> |
+| 17 | **产值** | <span class="score-inline">2</span> |
+| 18 | **GDP** | <span class="score-inline">2</span> |
+| 19 | **产量** | <span class="score-inline">1</span> |
+| 20 | **税收** | <span class="score-inline">1</span> |
 
-**涉及板块**: 农业(22) · 基建投资(22) · AI人工智能(18) · 石油能源(18) · 银行金融(16) · 消费(16) · 外贸(15) · 新能源(13)
+<div class="sectors-row"><i>涉及板块</i><span class="chip">农业<b>22</b></span><span class="chip">基建投资<b>22</b></span><span class="chip">AI人工智能<b>18</b></span><span class="chip">石油能源<b>18</b></span><span class="chip">银行金融<b>16</b></span><span class="chip">消费<b>16</b></span><span class="chip">外贸<b>15</b></span><span class="chip">新能源<b>13</b></span></div>
 
 ---
 
 ## 年度热点
 
-*近 365 天 Top 关键词*
+<p class="lead">近 365 天 Top 关键词</p>
 
 | 排名 | 关键词 | 出现次数 |
 |:----:|:-------|:--------:|
-| 1 | **市场** | 18 |
-| 2 | **亿元** | 14 |
-| 3 | **增长** | 13 |
-| 4 | **投资** | 12 |
-| 5 | **消费** | 12 |
-| 6 | **同比** | 10 |
-| 7 | **贸易** | 7 |
-| 8 | **万亿** | 7 |
-| 9 | **财政** | 6 |
-| 10 | **万元** | 4 |
-| 11 | **融资** | 3 |
-| 12 | **补贴** | 3 |
-| 13 | **预算** | 3 |
-| 14 | **外贸** | 3 |
-| 15 | **国债** | 2 |
-| 16 | **进出口** | 2 |
-| 17 | **产值** | 2 |
-| 18 | **GDP** | 2 |
-| 19 | **产量** | 1 |
-| 20 | **税收** | 1 |
+| 1 | **市场** | <span class="score-inline">18</span> |
+| 2 | **亿元** | <span class="score-inline">14</span> |
+| 3 | **增长** | <span class="score-inline">13</span> |
+| 4 | **投资** | <span class="score-inline">12</span> |
+| 5 | **消费** | <span class="score-inline">12</span> |
+| 6 | **同比** | <span class="score-inline">10</span> |
+| 7 | **贸易** | <span class="score-inline">7</span> |
+| 8 | **万亿** | <span class="score-inline">7</span> |
+| 9 | **财政** | <span class="score-inline">6</span> |
+| 10 | **万元** | <span class="score-inline">4</span> |
+| 11 | **融资** | <span class="score-inline">3</span> |
+| 12 | **补贴** | <span class="score-inline">3</span> |
+| 13 | **预算** | <span class="score-inline">3</span> |
+| 14 | **外贸** | <span class="score-inline">3</span> |
+| 15 | **国债** | <span class="score-inline">2</span> |
+| 16 | **进出口** | <span class="score-inline">2</span> |
+| 17 | **产值** | <span class="score-inline">2</span> |
+| 18 | **GDP** | <span class="score-inline">2</span> |
+| 19 | **产量** | <span class="score-inline">1</span> |
+| 20 | **税收** | <span class="score-inline">1</span> |
 
-**涉及板块**: 农业(22) · 基建投资(22) · AI人工智能(18) · 石油能源(18) · 银行金融(16) · 消费(16) · 外贸(15) · 新能源(13)
+<div class="sectors-row"><i>涉及板块</i><span class="chip">农业<b>22</b></span><span class="chip">基建投资<b>22</b></span><span class="chip">AI人工智能<b>18</b></span><span class="chip">石油能源<b>18</b></span><span class="chip">银行金融<b>16</b></span><span class="chip">消费<b>16</b></span><span class="chip">外贸<b>15</b></span><span class="chip">新能源<b>13</b></span></div>
 
 ---
 

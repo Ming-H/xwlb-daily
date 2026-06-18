@@ -1,0 +1,51 @@
+{{- define "main" -}}
+
+{{- /* latest daily edition for the masthead */ -}}
+{{- $daily := where .Site.RegularPages "Section" "daily" -}}
+{{- $latest := index $daily 0 -}}
+
+<header class="masthead">
+  <div class="masthead-top">
+    <span class="edition">
+      {{- with $latest -}}
+        最新一期 · <b>{{ .Date.Format "2006.01.02" }}</b>
+      {{- else -}}
+        {{- .Title -}}
+      {{- end -}}
+      &nbsp;·&nbsp; 共 {{ len $daily }} 期存档
+    </span>
+    <span class="live"><i class="pulse"></i> SIGNAL · 信号在途</span>
+  </div>
+
+  <h1 class="masthead-title">
+    央视联播<em>投资参考</em>
+    <span class="vol">CCTV News · Investment Intelligence</span>
+  </h1>
+
+  <p class="masthead-tag">
+    每日解析《新闻联播》经济信号，提取政策关键词，映射 <b>A 股板块</b>，捕捉异动与生命周期——把国家级叙事变成可操作的投资风向。
+  </p>
+</header>
+
+{{- if .Content -}}
+<div class="post-content md-content">
+  {{- partial "anchored_headings.html" .Content -}}
+</div>
+{{- end -}}
+
+{{- range first 8 $daily -}}
+<article class="post-entry">
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">{{ .Title }}</h2>
+  </header>
+  <div class="entry-content">
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p>
+  </div>
+  <footer class="entry-footer">
+    {{- with .Params.economy_count -}}经济相关 {{ . }} / {{ end -}}{{- with .Params.total_count -}}{{ . }} 条{{ end -}}
+  </footer>
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end -}}
+
+{{- end -}}
