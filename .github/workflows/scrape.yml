@@ -33,7 +33,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install Python deps
-        run: pip install jieba pyyaml openai
+        run: pip install jieba pyyaml anthropic
 
       - name: Run scrape pipeline
         env:

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-LLM 投资解读生成器（智谱 GLM）
-读取当日 analytics → 调 GLM 生成结构化投资简报 → 缓存 JSON。
+LLM 投资解读生成器（智谱 GLM-5.2）
+读取当日 analytics → 经智谱 Anthropic 兼容网关调 GLM-5.2 生成结构化投资简报 → 缓存 JSON。
 
 环境变量（缺失则优雅跳过，不阻断流水线）：
   LLM_API_KEY / ZHIPUAI_API_KEY / ANTHROPIC_AUTH_TOKEN  —— 任一即可
-  LLM_BASE_URL  默认 https://open.bigmodel.cn/api/paas/v4/
-  LLM_MODEL     默认 glm-4-flash
+  LLM_BASE_URL  默认 https://open.bigmodel.cn/api/anthropic
+  LLM_MODEL     默认 glm-5.2
 """
 import json
 import os
@@ -20,8 +20,8 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 ANALYTICS_DIR = DATA_DIR / "analytics"
 BRIEF_DIR = ANALYTICS_DIR / "briefs"
 
-DEFAULT_BASE_URL = "https://open.bigmodel.cn/api/paas/v4/"
-DEFAULT_MODEL = "glm-4-flash"
+DEFAULT_BASE_URL = "https://open.bigmodel.cn/api/anthropic"
+DEFAULT_MODEL = "glm-5.2"
 
 
 def _load_json(path: Path) -> dict:
@@ -114,32 +114,30 @@ def _extract_json(text: str) -> dict:
 
 
 def _call_llm(prompt: str) -> str:
-    """调用 GLM（智谱 OpenAI 兼容接口）。"""
+    """调用 GLM（经智谱 Anthropic 兼容网关，glm-5.2 在此可用）。"""
     try:
-        from openai import OpenAI
+        import anthropic
     except ImportError as e:
-        raise RuntimeError("未安装 openai SDK") from e
+        raise RuntimeError("未安装 anthropic SDK") from e
 
     key = _get_key()
     if not key:
         raise RuntimeError("未配置 LLM API key")
 
-    client = OpenAI(
+    client = anthropic.Anthropic(
         api_key=key,
         base_url=os.environ.get("LLM_BASE_URL", DEFAULT_BASE_URL),
     )
     model = os.environ.get("LLM_MODEL", DEFAULT_MODEL)
-    resp = client.chat.completions.create(
+    resp = client.messages.create(
         model=model,
-        messages=[
-            {"role": "system", "content": "你是资深A股投资分析师，只输出严格JSON。"},
-            {"role": "user", "content": prompt},
-        ],
-        temperature=0.5,
         max_tokens=1400,
+        temperature=0.5,
         timeout=60,
+        system="你是资深A股投资分析师，只输出严格JSON，不要任何解释或代码块标记。",
+        messages=[{"role": "user", "content": prompt}],
     )
-    return resp.choices[0].message.content or ""
+    return (resp.content[0].text if resp.content else "") or ""
 
 
 def _validate(brief: dict) -> dict:
