@@ -112,13 +112,13 @@
     {
       "type": "首次密集",
       "level": "yellow",
-      "keyword": "贸易",
+      "keyword": "投资",
       "detail": "单日出现3次，近2周首次"
     },
     {
       "type": "首次密集",
       "level": "yellow",
-      "keyword": "投资",
+      "keyword": "贸易",
       "detail": "单日出现3次，近2周首次"
     },
     {
@@ -180,52 +180,6 @@
       ]
     },
     {
-      "sector": "机器人",
-      "score": 98,
-      "week_count": 5,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "国务院",
-      "intensity_level": "intensive",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "601689",
-          "name": "拓普集团",
-          "market": "SH"
-        },
-        {
-          "code": "688017",
-          "name": "绿的谐波",
-          "market": "SH"
-        },
-        {
-          "code": "002747",
-          "name": "埃斯顿",
-          "market": "SZ"
-        },
-        {
-          "code": "300124",
-          "name": "汇川技术",
-          "market": "SZ"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260612",
-          "title": "[视频]【一线调研】织密全域物流网 畅通经济大动脉"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]【一线调研】筑牢地下管网 让城市“里子”更扎实"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]国内联播快讯"
-        }
-      ]
-    },
-    {
       "sector": "数据要素",
       "score": 98,
       "week_count": 7,
@@ -271,6 +225,52 @@
         {
           "date": "20260612",
           "title": "[视频]赵乐际同新加坡国会议长会谈"
+        }
+      ]
+    },
+    {
+      "sector": "机器人",
+      "score": 98,
+      "week_count": 5,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "国务院",
+      "intensity_level": "intensive",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "601689",
+          "name": "拓普集团",
+          "market": "SH"
+        },
+        {
+          "code": "688017",
+          "name": "绿的谐波",
+          "market": "SH"
+        },
+        {
+          "code": "002747",
+          "name": "埃斯顿",
+          "market": "SZ"
+        },
+        {
+          "code": "300124",
+          "name": "汇川技术",
+          "market": "SZ"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260612",
+          "title": "[视频]【一线调研】织密全域物流网 畅通经济大动脉"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]【一线调研】筑牢地下管网 让城市“里子”更扎实"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]国内联播快讯"
         }
       ]
     },
@@ -472,55 +472,6 @@
       ]
     },
     {
-      "sector": "农业",
-      "score": 89,
-      "week_count": 20,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "国务院",
-      "intensity_level": "results",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "600598",
-          "name": "北大荒",
-          "market": "SH"
-        },
-        {
-          "code": "000998",
-          "name": "隆平高科",
-          "market": "SZ"
-        },
-        {
-          "code": "300498",
-          "name": "温氏股份",
-          "market": "SZ"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260616",
-          "title": "[视频]5月份我国经济总体平稳 持续向新向优"
-        },
-        {
-          "date": "20260615",
-          "title": "[视频]【在希望的田野上】全国麦收接近尾声 夏播高效推进"
-        },
-        {
-          "date": "20260615",
-          "title": "[视频]“两重”建设推动一批民生工程落地实施"
-        },
-        {
-          "date": "20260614",
-          "title": "[视频]【牢记初心使命 奋进复兴征程】赓续红色血脉 走好新时代长征路"
-        },
-        {
-          "date": "20260614",
-          "title": "[视频]【在希望的田野上】各地做好抢收抢种 筑牢丰收基础"
-        }
-      ]
-    },
-    {
       "sector": "AI人工智能",
       "score": 89,
       "week_count": 15,
@@ -571,6 +522,55 @@
         {
           "date": "20260613",
           "title": "[视频]【一线调研】算力网织就数字经济新底座"
+        }
+      ]
+    },
+    {
+      "sector": "农业",
+      "score": 89,
+      "week_count": 20,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "国务院",
+      "intensity_level": "results",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "600598",
+          "name": "北大荒",
+          "market": "SH"
+        },
+        {
+          "code": "000998",
+          "name": "隆平高科",
+          "market": "SZ"
+        },
+        {
+          "code": "300498",
+          "name": "温氏股份",
+          "market": "SZ"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260616",
+          "title": "[视频]5月份我国经济总体平稳 持续向新向优"
+        },
+        {
+          "date": "20260615",
+          "title": "[视频]【在希望的田野上】全国麦收接近尾声 夏播高效推进"
+        },
+        {
+          "date": "20260615",
+          "title": "[视频]“两重”建设推动一批民生工程落地实施"
+        },
+        {
+          "date": "20260614",
+          "title": "[视频]【牢记初心使命 奋进复兴征程】赓续红色血脉 走好新时代长征路"
+        },
+        {
+          "date": "20260614",
+          "title": "[视频]【在希望的田野上】各地做好抢收抢种 筑牢丰收基础"
         }
       ]
     },
@@ -629,9 +629,9 @@
       ]
     },
     {
-      "sector": "地下管网",
+      "sector": "石油能源",
       "score": 86,
-      "week_count": 5,
+      "week_count": 15,
       "prev_count": 0,
       "trend": "NEW",
       "policy_level": "",
@@ -639,34 +639,41 @@
       "is_first": true,
       "stocks": [
         {
-          "code": "603958",
-          "name": "哈空调",
+          "code": "601857",
+          "name": "中国石油",
           "market": "SH"
         },
         {
-          "code": "300055",
-          "name": "万邦达",
-          "market": "SZ"
+          "code": "600028",
+          "name": "中国石化",
+          "market": "SH"
         },
         {
-          "code": "002671",
-          "name": "龙泉股份",
-          "market": "SZ"
-        },
-        {
-          "code": "300334",
-          "name": "津膜科技",
-          "market": "SZ"
+          "code": "600938",
+          "name": "中国海油",
+          "market": "SH"
         }
       ],
       "trigger_articles": [
         {
-          "date": "20260615",
-          "title": "[视频]“两重”建设推动一批民生工程落地实施"
+          "date": "20260616",
+          "title": "[视频]联播快讯"
         },
         {
-          "date": "20260611",
-          "title": "[视频]【一线调研】筑牢地下管网 让城市“里子”更扎实"
+          "date": "20260615",
+          "title": "[视频]美称与伊朗达成协议 伊朗称伊美就结束战争达成谅解备忘录"
+        },
+        {
+          "date": "20260614",
+          "title": "[视频]美称14日与伊朗签协议 伊朗称签署时间待定"
+        },
+        {
+          "date": "20260613",
+          "title": "[视频]伊朗外长披露伊美谅解备忘录草案部分内容"
+        },
+        {
+          "date": "20260613",
+          "title": "[视频]国际联播快讯"
         }
       ]
     },
@@ -725,9 +732,9 @@
       ]
     },
     {
-      "sector": "石油能源",
+      "sector": "地下管网",
       "score": 86,
-      "week_count": 15,
+      "week_count": 5,
       "prev_count": 0,
       "trend": "NEW",
       "policy_level": "",
@@ -735,41 +742,34 @@
       "is_first": true,
       "stocks": [
         {
-          "code": "601857",
-          "name": "中国石油",
+          "code": "603958",
+          "name": "哈空调",
           "market": "SH"
         },
         {
-          "code": "600028",
-          "name": "中国石化",
-          "market": "SH"
+          "code": "300055",
+          "name": "万邦达",
+          "market": "SZ"
         },
         {
-          "code": "600938",
-          "name": "中国海油",
-          "market": "SH"
+          "code": "002671",
+          "name": "龙泉股份",
+          "market": "SZ"
+        },
+        {
+          "code": "300334",
+          "name": "津膜科技",
+          "market": "SZ"
         }
       ],
       "trigger_articles": [
         {
-          "date": "20260616",
-          "title": "[视频]联播快讯"
-        },
-        {
           "date": "20260615",
-          "title": "[视频]美称与伊朗达成协议 伊朗称伊美就结束战争达成谅解备忘录"
+          "title": "[视频]“两重”建设推动一批民生工程落地实施"
         },
         {
-          "date": "20260614",
-          "title": "[视频]美称14日与伊朗签协议 伊朗称签署时间待定"
-        },
-        {
-          "date": "20260613",
-          "title": "[视频]伊朗外长披露伊美谅解备忘录草案部分内容"
-        },
-        {
-          "date": "20260613",
-          "title": "[视频]国际联播快讯"
+          "date": "20260611",
+          "title": "[视频]【一线调研】筑牢地下管网 让城市“里子”更扎实"
         }
       ]
     },
@@ -938,6 +938,43 @@
       ]
     },
     {
+      "sector": "黄金",
+      "score": 62,
+      "week_count": 2,
+      "prev_count": 0,
+      "trend": "NEW",
+      "policy_level": "",
+      "intensity_level": "results",
+      "is_first": true,
+      "stocks": [
+        {
+          "code": "600547",
+          "name": "山东黄金",
+          "market": "SH"
+        },
+        {
+          "code": "600489",
+          "name": "中金黄金",
+          "market": "SH"
+        },
+        {
+          "code": "002155",
+          "name": "湖南黄金",
+          "market": "SZ"
+        }
+      ],
+      "trigger_articles": [
+        {
+          "date": "20260611",
+          "title": "[视频]电视专题片《续写中朝传统友谊崭新篇章——习近平总书记访问朝鲜纪实》今晚播出"
+        },
+        {
+          "date": "20260611",
+          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
+        }
+      ]
+    },
+    {
       "sector": "工程机械",
       "score": 62,
       "week_count": 3,
@@ -972,43 +1009,6 @@
         {
           "date": "20260611",
           "title": "[视频]前5个月我国工程机械海内外市场快速增长"
-        }
-      ]
-    },
-    {
-      "sector": "黄金",
-      "score": 62,
-      "week_count": 2,
-      "prev_count": 0,
-      "trend": "NEW",
-      "policy_level": "",
-      "intensity_level": "results",
-      "is_first": true,
-      "stocks": [
-        {
-          "code": "600547",
-          "name": "山东黄金",
-          "market": "SH"
-        },
-        {
-          "code": "600489",
-          "name": "中金黄金",
-          "market": "SH"
-        },
-        {
-          "code": "002155",
-          "name": "湖南黄金",
-          "market": "SZ"
-        }
-      ],
-      "trigger_articles": [
-        {
-          "date": "20260611",
-          "title": "[视频]电视专题片《续写中朝传统友谊崭新篇章——习近平总书记访问朝鲜纪实》今晚播出"
-        },
-        {
-          "date": "20260611",
-          "title": "[视频]美军称完成对伊朗新一轮打击 伊朗称打击美军基地重要目标"
         }
       ]
     }
@@ -1054,46 +1054,6 @@
       "hit_count": 4,
       "recent_hit_count": 4
     },
-    "机器人": {
-      "keyword": "机器人",
-      "stage": "积极推进",
-      "stage_code": 2,
-      "timeline": [
-        {
-          "date": "20260611",
-          "hit": true,
-          "intensity": "intensive"
-        },
-        {
-          "date": "20260612",
-          "hit": true,
-          "intensity": "intensive"
-        },
-        {
-          "date": "20260613",
-          "hit": false,
-          "intensity": "none"
-        },
-        {
-          "date": "20260614",
-          "hit": false,
-          "intensity": "none"
-        },
-        {
-          "date": "20260615",
-          "hit": false,
-          "intensity": "none"
-        },
-        {
-          "date": "20260616",
-          "hit": false,
-          "intensity": "none"
-        }
-      ],
-      "first_seen": "20260611",
-      "hit_count": 2,
-      "recent_hit_count": 2
-    },
     "数据要素": {
       "keyword": "数据要素",
       "stage": "密集政策期",
@@ -1133,6 +1093,46 @@
       "first_seen": "20260611",
       "hit_count": 5,
       "recent_hit_count": 5
+    },
+    "机器人": {
+      "keyword": "机器人",
+      "stage": "积极推进",
+      "stage_code": 2,
+      "timeline": [
+        {
+          "date": "20260611",
+          "hit": true,
+          "intensity": "intensive"
+        },
+        {
+          "date": "20260612",
+          "hit": true,
+          "intensity": "intensive"
+        },
+        {
+          "date": "20260613",
+          "hit": false,
+          "intensity": "none"
+        },
+        {
+          "date": "20260614",
+          "hit": false,
+          "intensity": "none"
+        },
+        {
+          "date": "20260615",
+          "hit": false,
+          "intensity": "none"
+        },
+        {
+          "date": "20260616",
+          "hit": false,
+          "intensity": "none"
+        }
+      ],
+      "first_seen": "20260611",
+      "hit_count": 2,
+      "recent_hit_count": 2
     },
     "消费": {
       "keyword": "消费",

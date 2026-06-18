@@ -30,8 +30,8 @@ layout: "alerts"
 <p class="lead">关键词首次在单日密集出现，新政策信号</p>
 
 <ul class="signals">
-  <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">贸易</span><span class="sig-detail">单日出现3次，近2周首次</span></li>
   <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">投资</span><span class="sig-detail">单日出现3次，近2周首次</span></li>
+  <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">贸易</span><span class="sig-detail">单日出现3次，近2周首次</span></li>
   <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">市场</span><span class="sig-detail">单日出现5次，近2周首次</span></li>
   <li class="sig" data-lvl="yellow"><span class="dot" data-lvl="yellow" aria-hidden="true"></span><span class="sig-name">增长</span><span class="sig-detail">单日出现3次，近2周首次</span></li>
 </ul>

@@ -1,6 +1,6 @@
 {
   "date": "20260616",
-  "analyzed_at": "2026-06-18T02:01:10.427701",
+  "analyzed_at": "2026-06-18T02:04:21.730281",
   "total_articles": 16,
   "economy_count": 8,
   "articles": [
@@ -51,8 +51,8 @@
       "text_len": 1066,
       "is_economy": true,
       "economy_keywords": [
-        "贸易",
-        "投资"
+        "投资",
+        "贸易"
       ],
       "sector_keywords": [
         "贸易",
@@ -149,8 +149,8 @@
       "text_len": 301,
       "is_economy": true,
       "economy_keywords": [
-        "贸易",
-        "投资"
+        "投资",
+        "贸易"
       ],
       "sector_keywords": [
         "贸易"
@@ -246,8 +246,8 @@
       "is_economy": true,
       "economy_keywords": [
         "增长",
-        "市场",
         "投资",
+        "市场",
         "消费"
       ],
       "sector_keywords": [
@@ -293,10 +293,10 @@
       "economy_keywords": [
         "增长",
         "百分点",
-        "市场",
         "零售",
-        "消费",
-        "同比"
+        "同比",
+        "市场",
+        "消费"
       ],
       "sector_keywords": [
         "农业",
@@ -304,8 +304,8 @@
         "零售"
       ],
       "hit_sectors": [
-        "农业",
-        "消费"
+        "消费",
+        "农业"
       ],
       "policy_level": "国务院",
       "intensity_level": "intensive",
@@ -368,14 +368,14 @@
       "text_len": 1131,
       "is_economy": true,
       "economy_keywords": [
-        "贸易",
         "增长",
-        "市场",
         "外贸",
+        "贸易",
         "进出口",
         "万亿",
-        "亿元",
-        "同比"
+        "同比",
+        "市场",
+        "亿元"
       ],
       "sector_keywords": [
         "铁路",
@@ -385,9 +385,9 @@
         "贸易"
       ],
       "hit_sectors": [
-        "外贸",
+        "石油能源",
         "基建投资",
-        "石油能源"
+        "外贸"
       ],
       "policy_level": "",
       "intensity_level": "intensive",
@@ -413,8 +413,8 @@
   "daily_keywords": {
     "财政": 2,
     "税收": 1,
-    "贸易": 3,
     "投资": 3,
+    "贸易": 3,
     "市场": 5,
     "预算": 1,
     "增长": 3,
@@ -446,9 +446,9 @@
       ],
       "keywords": [
         "出口",
+        "一带一路",
         "贸易",
-        "外贸",
-        "一带一路"
+        "外贸"
       ]
     },
     "银行金融": {

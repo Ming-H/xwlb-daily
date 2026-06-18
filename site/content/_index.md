@@ -26,15 +26,15 @@ layout: "home"
   </li>
   <li class="board-row" data-lvl="red">
     <span class="rank">2</span>
-    <span class="board-name">机器人</span>
-    <span class="score">98</span>
-    <span class="board-stocks">拓普集团 · 绿的谐波 · 埃斯顿</span>
-  </li>
-  <li class="board-row" data-lvl="red">
-    <span class="rank">3</span>
     <span class="board-name">数据要素</span>
     <span class="score">98</span>
     <span class="board-stocks">海量数据 · 美亚柏科 · 创业慧康</span>
+  </li>
+  <li class="board-row" data-lvl="red">
+    <span class="rank">3</span>
+    <span class="board-name">机器人</span>
+    <span class="score">98</span>
+    <span class="board-stocks">拓普集团 · 绿的谐波 · 埃斯顿</span>
   </li>
   <li class="board-row" data-lvl="red">
     <span class="rank">4</span>

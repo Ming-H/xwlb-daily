@@ -11,8 +11,8 @@ layout: "hotspots"
 | 排名 | 关键词 | 出现次数 |
 |:----:|:-------|:--------:|
 | 1 | **市场** | <span class="score-inline">5</span> |
-| 2 | **贸易** | <span class="score-inline">3</span> |
-| 3 | **投资** | <span class="score-inline">3</span> |
+| 2 | **投资** | <span class="score-inline">3</span> |
+| 3 | **贸易** | <span class="score-inline">3</span> |
 | 4 | **增长** | <span class="score-inline">3</span> |
 | 5 | **财政** | <span class="score-inline">2</span> |
 | 6 | **消费** | <span class="score-inline">2</span> |
