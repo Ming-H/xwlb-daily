@@ -3,7 +3,7 @@ title: "央视联播投资参考"
 description: "新闻联播经济信号追踪，捕捉投资机会"
 layout: "home"
 ---
-<div class="daystat"><span class="ds-item"><b>16</b><i>条新闻</i></span><span class="ds-item"><b>8</b><i>条经济相关</i></span><span class="ds-item"><b>2026年6月16日</b><i>最新一期</i></span></div>
+<div class="daystat"><span class="ds-item"><b>16</b><i>条新闻</i></span><span class="ds-item"><b>4</b><i>条经济相关</i></span><span class="ds-item"><b>2026年6月17日</b><i>最新一期</i></span></div>
 
 ## 今日预警
 
