@@ -1,0 +1,129 @@
+[
+  {
+    "date": "2026-06-18",
+    "market_state": "watch",
+    "count": 30,
+    "top20": [
+      {
+        "code": "300475",
+        "name": "香农芯创",
+        "score": 90.0,
+        "catalyst": true
+      },
+      {
+        "code": "000657",
+        "name": "中钨高新",
+        "score": 86.5,
+        "catalyst": true
+      },
+      {
+        "code": "603986",
+        "name": "兆易创新",
+        "score": 85.4,
+        "catalyst": true
+      },
+      {
+        "code": "688630",
+        "name": "芯碁微装",
+        "score": 81.0,
+        "catalyst": true
+      },
+      {
+        "code": "600549",
+        "name": "厦门钨业",
+        "score": 80.0,
+        "catalyst": true
+      },
+      {
+        "code": "301377",
+        "name": "鼎泰高科",
+        "score": 79.1,
+        "catalyst": false
+      },
+      {
+        "code": "002281",
+        "name": "光迅科技",
+        "score": 78.1,
+        "catalyst": true
+      },
+      {
+        "code": "002916",
+        "name": "深南电路",
+        "score": 77.4,
+        "catalyst": true
+      },
+      {
+        "code": "603124",
+        "name": "江南新材",
+        "score": 76.8,
+        "catalyst": true
+      },
+      {
+        "code": "603115",
+        "name": "海星股份",
+        "score": 75.6,
+        "catalyst": false
+      },
+      {
+        "code": "688629",
+        "name": "华丰科技",
+        "score": 74.8,
+        "catalyst": true
+      },
+      {
+        "code": "603663",
+        "name": "三祥新材",
+        "score": 74.0,
+        "catalyst": true
+      },
+      {
+        "code": "301200",
+        "name": "大族数控",
+        "score": 73.4,
+        "catalyst": false
+      },
+      {
+        "code": "301123",
+        "name": "奕东电子",
+        "score": 72.4,
+        "catalyst": true
+      },
+      {
+        "code": "001339",
+        "name": "智微智能",
+        "score": 70.6,
+        "catalyst": true
+      },
+      {
+        "code": "002768",
+        "name": "国恩股份",
+        "score": 70.0,
+        "catalyst": false
+      },
+      {
+        "code": "301536",
+        "name": "星宸科技",
+        "score": 67.3,
+        "catalyst": true
+      },
+      {
+        "code": "300221",
+        "name": "银禧科技",
+        "score": 64.5,
+        "catalyst": true
+      },
+      {
+        "code": "301045",
+        "name": "天禄科技",
+        "score": 64.0,
+        "catalyst": true
+      },
+      {
+        "code": "301099",
+        "name": "雅创电子",
+        "score": 63.8,
+        "catalyst": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+{{- define "main" -}}
+{{- $h := .Site.Data.picks.history -}}
+{{- $l := .Site.Data.picks.latest -}}
+<header class="page-header">
+  <h1>命中回看 · 选股成绩单</h1>
+</header>
+
+<p class="lead">每日存档 TOP20 候选，跟踪其相对沪深 300 的超额收益——用结果验证 CAN SLIM 选股在 A 股是否有效。<strong>非投资建议。</strong></p>
+
+{{- with $l -}}
+<div class="beacon-strip" data-state="{{ .market_state }}">
+  <span class="beacon-lamp" data-state="{{ .market_state }}"></span>
+  <span class="bs-verdict">最新一期：{{ .updated }}</span>
+  <span class="bs-meta">扫描 {{ .count }} 只</span>
+</div>
+{{- end -}}
+
+<div class="metrics">
+  <div class="metric"><div class="m-label">跟踪期数</div><div class="m-value">{{ len $h }}</div><div class="m-delta">每日积累</div></div>
+  <div class="metric"><div class="m-label">累计候选</div>
+    <div class="m-value">{{ range $h }}{{ len .top20 }}{{ end }}</div>
+    <div class="m-delta">本期起算</div></div>
+  <div class="metric" data-tone="watch"><div class="m-label">胜率</div><div class="m-value">—</div><div class="m-delta">≥2 期后计算</div></div>
+  <div class="metric" data-tone="watch"><div class="m-label">平均超额</div><div class="m-value">—</div><div class="m-delta">T+5 跟踪</div></div>
+</div>
+
+<h2>历史选股时间线</h2>
+{{- if $h -}}
+{{- range $h -}}
+<div class="beacon-strip" style="display:block;border-left-color:var(--rule-strong);margin-bottom:10px">
+  <span class="bs-verdict" style="font-family:var(--font-mono);font-size:.9rem">{{ .date }}</span>
+  <span class="bs-meta">{{ len .top20 }} 只 · 大盘 {{ .market_state }}</span>
+  <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px">
+    {{- range first 8 .top20 -}}
+    <span class="chip">{{ if .catalyst }}🚩 {{ end }}{{ .name }} <b>{{ .score }}</b></span>
+    {{- end -}}
+  </div>
+</div>
+{{- end -}}
+{{- else -}}
+<p>暂无历史。每交易日 18:00 实筛后自动存档。</p>
+{{- end -}}
+
+<p class="lead" style="margin-top:1.5em">📈 命中率曲线、TOP20 等权净值（对比沪深 300）将在积累 ≥2 期后自动生成——这是灯塔的「成绩单」，不是吹自己多准，而是把历史摆出来让你自己验证。</p>
+{{- end -}}

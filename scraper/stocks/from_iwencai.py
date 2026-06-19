@@ -111,3 +111,9 @@ if __name__ == "__main__":
     for s in res["top20"][:12]:
         flag = "🚩景气" if s["catalyst"] else "     "
         print(f"  {s['score']:>5}  {s['code']:<7} {s['name']:<8} 近年{s['ch60d']:>+7.1f}%  {flag}")
+    # 快照到 history（命中回看）
+    try:
+        import snapshot as _s
+        _s.snapshot()
+    except Exception as e:
+        print(f"snapshot 跳过：{e}")
