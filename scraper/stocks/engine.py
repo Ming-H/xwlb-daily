@@ -32,21 +32,43 @@ def _safe_float(v):
 
 
 # ---------------- 阶段 1：全市场 spot 快速初筛 ----------------
-def fetch_spot() -> pd.DataFrame:
-    """东财全市场快照。含价/量比/换手/流通市值/60日&年初至今涨跌幅。"""
-    df = ak.stock_zh_a_spot_em()
-    df = df.rename(columns={
-        "代码": "code", "名称": "name", "最新价": "price",
-        "量比": "volume_ratio", "换手率": "turnover",
-        "流通市值": "float_mv", "60日涨跌幅": "ch60d", "年初至今涨跌幅": "ch_ytd",
-    })
+def _normalize_spot(df: pd.DataFrame):
     for c in ["price", "volume_ratio", "turnover", "float_mv", "ch60d", "ch_ytd"]:
         if c in df:
             df[c] = pd.to_numeric(df[c], errors="coerce")
-    df["float_mv_yi"] = df.get("float_mv") / 1e8
+    if "float_mv" in df:
+        df["float_mv_yi"] = df["float_mv"] / 1e8
     df["st"] = df["name"].astype(str).str.contains(r"ST|\*ST|退", na=False, regex=True)
     df["board"] = df["code"].astype(str).str[0].map(
         {"0": "SZ", "3": "SZ", "6": "SH", "8": "BJ", "4": "BJ"})
+
+
+def fetch_spot() -> pd.DataFrame:
+    """全市场快照。优先东财（字段全），失败 fallback 新浪源（海外可达性更好）。"""
+    # 源1：东财（字段全：量比/换手/流通市值/60日涨幅）
+    try:
+        df = ak.stock_zh_a_spot_em()
+        df = df.rename(columns={
+            "代码": "code", "名称": "name", "最新价": "price",
+            "量比": "volume_ratio", "换手率": "turnover",
+            "流通市值": "float_mv", "60日涨跌幅": "ch60d", "年初至今涨跌幅": "ch_ytd",
+        })
+        _normalize_spot(df)
+        print(f"东财源：{len(df)} 只")
+        return df
+    except Exception as e:
+        print(f"东财源失败（{e}），切换新浪源…")
+    # 源2：新浪（字段较少，但海外可达）
+    df = ak.stock_zh_a_spot()
+    df = df.rename(columns={
+        "code": "code", "name": "name", "trade": "price",
+        "changepercent": "ch60d",            # 新浪无60日涨幅，用当日涨跌幅代理 L
+        "turnoverratio": "turnover",
+    })
+    df["volume_ratio"] = None
+    df["float_mv_yi"] = None
+    _normalize_spot(df)
+    print(f"新浪源：{len(df)} 只")
     return df
 
 
