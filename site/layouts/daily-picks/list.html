@@ -40,7 +40,7 @@
   <tr>
     <td class="sb-rank">{{ add $i 1 }}</td>
     <td>
-      <span class="sb-name">{{ $s.name }}</span>
+      <a class="sb-name" href="{{ "checkup/" | relURL }}?code={{ $s.code }}">{{ $s.name }}</a>
       <span class="sb-code">{{ $s.code }}</span>
     </td>
     <td class="sb-score">{{ $s.score }}</td>

@@ -1,54 +1,79 @@
 {{- define "main" -}}
+{{- $l := .Site.Data.picks.latest -}}
 <header class="page-header">
   <h1>个股体检 · CAN SLIM</h1>
 </header>
 
 <style>
-.checkup-search{display:flex;gap:10px;margin:0 0 22px;flex-wrap:wrap}
-.checkup-search input{flex:1 1 280px;padding:13px 16px;font-family:var(--font-mono);font-size:1rem;border:1px solid var(--rule-strong);border-radius:var(--radius-lg);background:var(--paper);color:var(--ink)}
-.checkup-search input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--beacon-glow)}
-.checkup-search button{padding:13px 26px;font-family:var(--font-mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--brand);color:#fff8ec;border:0;border-radius:var(--radius-lg);cursor:pointer;transition:transform .15s,box-shadow .15s}
-.checkup-search button:hover{transform:translateY(-2px);box-shadow:0 8px 20px -8px var(--beacon-glow)}
-.ck-hint{font-family:var(--font-mono);font-size:.84rem;color:var(--ink-soft);padding:14px 18px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--brand);border-radius:var(--radius)}
-.ck-hint a{color:var(--brand)}
-.checkup-grid{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;margin-top:8px}
-@media(max-width:640px){.checkup-grid{grid-template-columns:1fr}}
+.checkup-search{display:flex;gap:10px;margin:0 0 18px;flex-wrap:wrap}
+.checkup-search input,.checkup-search select{padding:12px 14px;font-family:var(--font-mono);font-size:.95rem;border:1px solid var(--rule-strong);border-radius:var(--radius-lg);background:var(--paper);color:var(--ink)}
+.checkup-search input{flex:1 1 220px}
+.checkup-search select{flex:0 0 auto}
+.checkup-search button{padding:12px 24px;font-family:var(--font-mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--brand);color:#fff8ec;border:0;border-radius:var(--radius-lg);cursor:pointer}
+.ck-hint{font-family:var(--font-mono);font-size:.84rem;color:var(--ink-soft);padding:13px 16px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--brand);border-radius:var(--radius)}
+.ck-card{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;margin-top:8px}
+@media(max-width:640px){.ck-card{grid-template-columns:1fr}}
+.ck-meta{font-family:var(--font-mono);font-size:.78rem;color:var(--ink-faint);margin:6px 0 0}
 </style>
 
 <div class="checkup-search">
-  <input id="ck-code" type="text" placeholder="输入股票代码，如 600519 / 000001 / 300750" />
+  <input id="ck-code" type="text" placeholder="输入代码或名称，如 300475 / 香农芯创">
+  <select id="ck-pick">
+    <option value="">— 从今日候选选 —</option>
+    {{- range $l.top20 -}}<option value="{{ .code }}">{{ .name }}（{{ .code }}）· {{ .score }}</option>{{- end -}}
+  </select>
   <button id="ck-go">体检</button>
 </div>
-<div id="ck-result" class="ck-hint">输入任意 A 股代码，实时跑七要素深度体检（盈利 · 新高 · 资金 · 强度 · 机构）。</div>
-
-<h2>体检示例 · 贵州茅台（600519）</h2>
-
-<div class="checkup-grid">
-  <div class="score-ring" style="width:110px;height:110px">
-    <svg width="110" height="110" viewBox="0 0 110 110">
-      <circle class="sr-track" cx="55" cy="55" r="48" stroke-width="8"/>
-      <circle class="sr-prog" cx="55" cy="55" r="48" stroke-width="8" stroke-dasharray="301.6" stroke-dashoffset="81.4"/>
-    </svg>
-    <span class="sr-num">73</span>
-  </div>
-  <div>
-    <div class="factor-row"><span class="f-letter">C</span><span class="f-name">当季收益<div class="factor-track"><div class="f-fill" style="width:75%"></div></div></span><span class="f-val">同比 +16%</span></div>
-    <div class="factor-row"><span class="f-letter">A</span><span class="f-name">年度收益<div class="factor-track"><div class="f-fill" style="width:85%"></div></div></span><span class="f-val">ROE 30%</span></div>
-    <div class="factor-row"><span class="f-letter">N</span><span class="f-name">新催化<div class="factor-track"><div class="f-fill" style="width:70%"></div></div></span><span class="f-val">距高 5%</span></div>
-    <div class="factor-row"><span class="f-letter">S</span><span class="f-name">供需<div class="factor-track"><div class="f-fill" style="width:62%"></div></div></span><span class="f-val">量比 1.4</span></div>
-    <div class="factor-row"><span class="f-letter">L</span><span class="f-name">领涨强度<div class="factor-track"><div class="f-fill" style="width:55%"></div></div></span><span class="f-val">前 45%</span></div>
-    <div class="factor-row"><span class="f-letter">I</span><span class="f-name">机构持仓<div class="factor-track"><div class="f-fill" style="width:80%"></div></div></span><span class="f-val">主力净流入</span></div>
-    <div class="factor-row"><span class="f-letter">M</span><span class="f-name">大盘方向<div class="factor-track"><div class="f-fill" style="width:50%"></div></div></span><span class="f-val">观望</span></div>
-  </div>
-</div>
+<div id="ck-result" class="ck-hint">从今日 CAN SLIM 候选中选一只，或输入候选代码/名称，即时看七要素体检。完整全市场实时体检需 serverless（规划中）。</div>
 
 <script>
-(function(){
-  var go=document.getElementById('ck-go'),code=document.getElementById('ck-code'),r=document.getElementById('ck-result');
-  function run(){var c=code.value.trim();if(!c){r.textContent='请输入股票代码';return;}
-    r.innerHTML='<b>'+c+'</b> 的在线深度体检将在 <b>P5</b> 接入 akshare 实时取数后上线。当前可前往 <a href="{{ "daily-picks/" | relURL }}">每日选股</a> 查看全市场打分候选。';}
-  go.addEventListener('click',run);
-  code.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
-})();
+window.LH_PICKS = {{ $l.top20 | jsonify }};
+var FACTORS = [["C","当季收益"],["A","年度收益"],["N","新催化"],["S","供需"],["L","领涨强度"],["I","机构"],["M","大盘"]];
+
+function find(q){
+  q = (q||"").trim();
+  if(!q) return null;
+  return window.LH_PICKS.find(function(s){
+    return s.code===q || s.name===q || (s.name||"").indexOf(q)>=0 || (s.code||"").indexOf(q)>=0;
+  });
+}
+function ring(score){
+  var r=42, c=2*Math.PI*r, off=c*(1-score/100);
+  return '<div class="score-ring" style="width:110px;height:110px">'+
+    '<svg width="110" height="110" viewBox="0 0 110 110">'+
+    '<circle class="sr-track" cx="55" cy="55" r="'+r+'" stroke-width="8" fill="none"/>'+
+    '<circle class="sr-prog" cx="55" cy="55" r="'+r+'" stroke-width="8" fill="none" stroke-dasharray="'+c.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'"/>'+
+    '</svg><span class="sr-num">'+score+'</span></div>';
+}
+function render(s){
+  var f = s.factors || {};
+  var rows = FACTORS.map(function(k){
+    var v = Math.round(f[k[0]]||0);
+    return '<div class="factor-row"><span class="f-letter">'+k[0]+'</span>'+
+      '<span class="f-name">'+k[1]+'<div class="factor-track"><div class="f-fill" style="width:'+v+'%"></div></div></span>'+
+      '<span class="f-val">'+v+'</span></div>';
+  }).join("");
+  var cat = s.catalyst ? '<span class="catalyst">🚩 政策/景气催化</span>' : '';
+  document.getElementById("ck-result").innerHTML =
+    '<div class="ck-card">'+ring(s.score)+
+    '<div><span class="sb-name" style="font-size:1.3rem">'+s.name+'</span> '+
+    '<span class="sb-code">'+s.code+'</span> '+cat+
+    '<p class="ck-meta">灯塔分 '+s.score+'　·　近一年 '+(s.ch60d||0).toFixed(1)+'%</p>'+
+    rows+'</div></div>';
+}
+function run(){
+  var q = document.getElementById("ck-code").value || document.getElementById("ck-pick").value;
+  var s = find(q);
+  if(!s){ document.getElementById("ck-result").textContent = "未在今日候选中找到「"+q+"」。完整全市场体检需 serverless。"; return; }
+  render(s);
+}
+document.getElementById("ck-go").addEventListener("click", run);
+document.getElementById("ck-code").addEventListener("keydown", function(e){ if(e.key==="Enter") run(); });
+document.getElementById("ck-pick").addEventListener("change", function(){
+  if(this.value){ document.getElementById("ck-code").value=this.value; run(); }
+});
+// URL ?code= 自动体检
+var m = /code=([^&]+)/.exec(location.search);
+if(m){ var s=find(decodeURIComponent(m[1])); if(s) render(s); }
 </script>
 {{- end -}}
