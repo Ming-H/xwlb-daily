@@ -1,4 +1,4 @@
-baseURL = 'https://ming-h.github.io/xwlb-daily/'
+baseURL = 'https://ming-h.github.io/lighthouse/'
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-cn"
 title = '灯塔 Lighthouse · A 股投资辅助终端'
