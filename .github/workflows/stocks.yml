@@ -5,6 +5,11 @@ on:
     # 北京时间 18:00 = UTC 10:00，周一至周五（节假日由脚本内交易日历二次过滤）
     - cron: '0 10 * * 1-5'
   workflow_dispatch:
+    inputs:
+      force:
+        description: '忽略交易日，强制跑（测 akshare 用）'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -33,7 +38,7 @@ jobs:
       - name: Run CAN SLIM scoring
         # 阶段1 全市场 spot 初筛 → 阶段2 TOP50 深度取数 → 输出 site/data/picks/latest.json
         # market_state 当前默认 watch；P3 接入宏观灯塔信号后改为读取
-        run: python scraper/stocks/engine.py --market watch --enrich-top 50
+        run: python scraper/stocks/engine.py --market watch --enrich-top 50 ${{ inputs.force == true && '--force' || '' }}
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3

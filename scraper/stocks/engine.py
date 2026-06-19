@@ -175,17 +175,21 @@ if __name__ == "__main__":
     ap.add_argument("--market", default="watch", choices=["offense", "watch", "defense"])
     ap.add_argument("--enrich-top", type=int, default=50)
     ap.add_argument("--demo", action="store_true", help="仅跑 spot 初筛，不做 enrich（快速验证）")
+    ap.add_argument("--force", action="store_true", help="忽略交易日，强制运行（测试用）")
     a = ap.parse_args()
-    # 交易日过滤（节假日 skip）
-    try:
-        cal = ak.tool_trade_date_hist_sina()
-        today = pd.Timestamp.now().strftime("%Y-%m-%d")
-        dates = set(pd.to_datetime(cal["trade_date"]).dt.strftime("%Y-%m-%d"))
-        if today not in dates:
-            print(f"{today} 非交易日，跳过。")
-            sys.exit(0)
-    except Exception as e:
-        print(f"交易日历获取失败（{e}），保守继续。")
+    # 交易日过滤（节假日 skip；--force 跳过用于测试）
+    if a.force:
+        print("⚠️ 强制运行（忽略交易日过滤，测试用）")
+    else:
+        try:
+            cal = ak.tool_trade_date_hist_sina()
+            today = pd.Timestamp.now().strftime("%Y-%m-%d")
+            dates = set(pd.to_datetime(cal["trade_date"]).dt.strftime("%Y-%m-%d"))
+            if today not in dates:
+                print(f"{today} 非交易日，跳过。")
+                sys.exit(0)
+        except Exception as e:
+            print(f"交易日历获取失败（{e}），保守继续。")
     try:
         spot = fetch_spot()
         quick = quick_screen(spot, a.market)
