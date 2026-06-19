@@ -4,26 +4,22 @@
 {{- $daily := where .Site.RegularPages "Section" "daily" -}}
 {{- $latest := index $daily 0 -}}
 
-<header class="masthead">
+<header class="masthead lighthouse-hero">
   <div class="masthead-top">
     <span class="edition">
-      {{- with $latest -}}
-        最新一期 · <b>{{ .Date.Format "2006.01.02" }}</b>
-      {{- else -}}
-        {{- .Title -}}
-      {{- end -}}
+      {{- with $latest -}}最新一期 · <b>{{ .Date.Format "2006.01.02" }}</b>{{- else -}}{{- .Title -}}{{- end -}}
       &nbsp;·&nbsp; 共 {{ len $daily }} 期存档
     </span>
-    <span class="live"><i class="pulse"></i> SIGNAL · 信号在途</span>
+    <span class="beacon-wrap"><span class="beacon-lamp" data-state="watch"></span><span class="beacon-label">SIGNAL · 信号在途</span></span>
   </div>
 
   <h1 class="masthead-title">
-    央视联播<em>投资参考</em>
-    <span class="vol">CCTV News · Investment Intelligence</span>
+    灯塔<em>Lighthouse</em>
+    <span class="vol">A 股投资辅助终端 · 宏观大势 × CAN SLIM 选股</span>
   </h1>
 
   <p class="masthead-tag">
-    每日 AI 解析《新闻联播》经济信号，映射 <b>A 股板块</b>，附投资解读、多周期图表与完整文字稿——把国家级叙事变成可操作的投资风向。
+    每晚 <b>新闻联播 + 宏观四板块</b> 判断大势（进攻 / 观望 / 防守），每交易日 <b>全市场 CAN SLIM 打分</b> 筛选领涨成长股——把「该不该买、买什么、为什么」收进一个终端。
   </p>
 </header>
 
@@ -33,18 +29,47 @@
 </div>
 {{- end -}}
 
+{{- /* 灯塔信号 · 大盘方向（M） */ -}}
+<section class="home-nav">
+  <h2 class="nav-heading">灯塔信号 · 大盘方向（M）</h2>
+  <div class="beacon-strip" data-state="watch">
+    <span class="beacon-lamp" data-state="watch"></span>
+    <span class="bs-verdict">当前研判：观望（示例）</span>
+    <span class="bs-meta">信号每日 21:45 更新 · 对应 CAN SLIM 的 M</span>
+  </div>
+</section>
+
+{{- /* 核心终端 4 模块 */ -}}
 {{- $nav := slice
-  (dict "title" "每日新闻" "url" ("daily/" | relURL)     "desc" "逐条解析当日经济信号 + AI 投资解读")
-  (dict "title" "热点图表" "url" ("charts/" | relURL)    "desc" "板块热力图 / 关键词趋势 / 多周期排行")
-  (dict "title" "经济热点" "url" ("hotspots/" | relURL)  "desc" "日 / 周 / 月 / 半年 高频关键词")
-  (dict "title" "板块热力" "url" ("sectors/" | relURL)   "desc" "板块分数排行与龙头股")
-  (dict "title" "异动预警" "url" ("alerts/" | relURL)    "desc" "关键词频次异动监测")
-  (dict "title" "生命周期" "url" ("lifecycle/" | relURL) "desc" "政策从探索到退潮的轨迹")
+  (dict "title" "大盘视野" "url" ("market-view/" | relURL) "desc" "新闻联播 + 宏观四板块 + 灯塔信号三色，判断该不该进场" "tag" "The Big Picture")
+  (dict "title" "每日选股" "url" ("daily-picks/" | relURL) "desc" "全市场 CAN SLIM 打分 · TOP20 候选 · 七要素体检卡" "tag" "IBD 50")
+  (dict "title" "个股体检" "url" ("checkup/" | relURL) "desc" "输入代码 → 七要素深度体检 + 趋势图" "tag" "Stock Checkup")
+  (dict "title" "命中回看" "url" ("hit-rate/" | relURL) "desc" "历史候选表现追踪 · 胜率与超额净值曲线" "tag" "独创验证")
 -}}
 <section class="home-nav">
-  <h2 class="nav-heading">板块导航</h2>
+  <h2 class="nav-heading">核心终端</h2>
   <nav class="navcards">
     {{- range $nav -}}
+    <a class="navcard fade-up" href="{{ .url }}">
+      <span class="navcard-tag">{{ .tag }}</span>
+      <span class="navcard-title">{{ .title }}</span>
+      <span class="navcard-desc">{{ .desc }}</span>
+    </a>
+    {{- end -}}
+  </nav>
+</section>
+
+{{- /* 新闻与板块（现有数据） */ -}}
+{{- $sec := slice
+  (dict "title" "新闻联播存档" "url" ("daily/" | relURL)     "desc" "逐条解析当日经济信号 + AI 投资解读")
+  (dict "title" "板块热力"     "url" ("sectors/" | relURL)   "desc" "板块分数排行与龙头股")
+  (dict "title" "热点图表"     "url" ("charts/" | relURL)    "desc" "板块热力图 / 关键词趋势 / 多周期排行")
+  (dict "title" "经济热点"     "url" ("hotspots/" | relURL)  "desc" "日 / 周 / 月 / 半年 高频关键词")
+-}}
+<section class="home-nav">
+  <h2 class="nav-heading">新闻与板块</h2>
+  <nav class="navcards">
+    {{- range $sec -}}
     <a class="navcard" href="{{ .url }}">
       <span class="navcard-title">{{ .title }}</span>
       <span class="navcard-desc">{{ .desc }}</span>
@@ -53,7 +78,7 @@
   </nav>
 </section>
 
-{{- range first 8 $daily -}}
+{{- range first 6 $daily -}}
 <article class="post-entry">
   <header class="entry-header">
     <h2 class="entry-hint-parent">{{ .Title }}</h2>

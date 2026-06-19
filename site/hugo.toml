@@ -1,7 +1,7 @@
 baseURL = 'https://ming-h.github.io/xwlb-daily/'
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-cn"
-title = '央视联播 · 投资参考'
+title = '灯塔 Lighthouse · A 股投资辅助终端'
 theme = 'PaperMod'
 
 enableRobotsTXT = true
@@ -28,14 +28,14 @@ ignoreLogs = ['warning-goldmark-raw-html']
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = false
   ShowToc = false
-  description = "新闻联播经济信号辅助投资决策"
+  description = "A 股投资辅助终端 · 宏观大势 × CAN SLIM 选股"
 
   [params.assets]
     favicon = "favicon.svg"
 
   [params.homeInfoParams]
-    Title = "央视联播投资参考"
-    Content = "每日新闻联播经济信号追踪，捕捉投资机会"
+    Title = "灯塔 Lighthouse"
+    Content = "A 股投资辅助终端 · 每日宏观大势 + CAN SLIM 选股"
 
 [[params.socialIcons]]
   name = "github"
@@ -47,31 +47,26 @@ ignoreLogs = ['warning-goldmark-raw-html']
   url = ""
 
 [[menu.main]]
-  name = "每日新闻"
+  name = "大盘视野"
   weight = 2
-  url = "daily/"
+  url = "market-view/"
 
 [[menu.main]]
-  name = "经济热点"
+  name = "每日选股"
   weight = 3
-  url = "hotspots/"
+  url = "daily-picks/"
 
 [[menu.main]]
-  name = "板块热力"
+  name = "个股体检"
   weight = 4
-  url = "sectors/"
+  url = "checkup/"
 
 [[menu.main]]
-  name = "异动预警"
+  name = "命中回看"
   weight = 5
-  url = "alerts/"
+  url = "hit-rate/"
 
 [[menu.main]]
-  name = "生命周期"
+  name = "新闻存档"
   weight = 6
-  url = "lifecycle/"
-
-[[menu.main]]
-  name = "热点图表"
-  weight = 7
-  url = "charts/"
+  url = "daily/"

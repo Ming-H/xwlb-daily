@@ -5,32 +5,43 @@
 
 /* ---------- 1. Design tokens ------------------------------------------- */
 :root {
-  /* paper / ink */
-  --paper:        #f4efe2;
-  --paper-2:      #efe7d6;
-  --paper-3:      #e9e0cb;
-  --ink:          #211c15;
-  --ink-soft:     #6a6051;
-  --ink-faint:    #938776;
-  --rule:         #d8ccb4;
-  --rule-strong:  #c3b496;
+  /* paper / ink — 海岸雾白 + 深海军墨 */
+  --paper:        #eef1f6;
+  --paper-2:      #e3e8f0;
+  --paper-3:      #d6dee9;
+  --ink:          #0e1a2b;
+  --ink-soft:     #46566e;
+  --ink-faint:    #8595ab;
+  --rule:         #c6d1de;
+  --rule-strong:  #a6b4c6;
 
-  /* signals */
-  --crimson:        #a8281e;
-  --crimson-bright: #c4302b;
-  --crimson-ink:    #7e1d16;
-  --crimson-soft:   rgba(168, 40, 30, .10);
-  --gold:           #956a1c;
-  --gold-soft:      rgba(149, 106, 28, .13);
-  --growth:         #3c6a36;
-  --growth-soft:    rgba(60, 106, 54, .12);
+  /* brand — 灯塔光（琥珀金） */
+  --brand:        #b8801a;
+  --brand-bright: #d99a1f;
+  --beacon:       #c9921a;
+  --beacon-glow:  rgba(201, 146, 26, .22);
+
+  /* signals — 灯塔三色灯（M 大盘方向） */
+  --crimson:        #b23a2c;       /* 防守 / 跌 */
+  --crimson-bright: #d04938;
+  --crimson-ink:    #8a2418;
+  --crimson-soft:   rgba(178, 58, 44, .10);
+  --gold:           #b8801a;       /* 观望 */
+  --gold-soft:      rgba(184, 128, 26, .13);
+  --growth:         #2f7d52;       /* 进攻 */
+  --growth-soft:    rgba(47, 125, 82, .12);
+
+  --sig-offense: var(--growth);
+  --sig-watch:   var(--beacon);
+  --sig-defense: var(--crimson);
+
   /* chart series */
   --c-teal:         #1f7a7a;
   --c-violet:       #6d4b9a;
   --c-amber:        #c98a1a;
 
-  --shadow:     0 1px 0 rgba(33, 28, 21, .04), 0 18px 40px -28px rgba(33, 28, 21, .35);
-  --shadow-lift:0 2px 0 rgba(33, 28, 21, .05), 0 30px 60px -30px rgba(168, 40, 30, .30);
+  --shadow:     0 1px 0 rgba(14, 26, 43, .04), 0 18px 40px -28px rgba(14, 26, 43, .30);
+  --shadow-lift:0 2px 0 rgba(14, 26, 43, .05), 0 30px 60px -30px rgba(184, 128, 26, .30);
 
   /* type */
   --font-display: "Fraunces", "Noto Serif SC", Georgia, "Songti SC", serif;
@@ -40,41 +51,52 @@
   /* shape */
   --main-width: 800px;
   --radius: 4px;
-  --radius-lg: 8px;
+  --radius-lg: 10px;
 
   /* grain overlay */
-  --grain-op: .045;
+  --grain-op: .04;
   --grain-blend: multiply;
 }
 
 :root[data-theme="dark"] {
-  --paper:        #15110b;
-  --paper-2:      #1d1812;
-  --paper-3:      #25201a;
-  --ink:          #ece2d0;
-  --ink-soft:     #b0a48e;
-  --ink-faint:    #84796a;
-  --rule:         #362d22;
-  --rule-strong:  #4a3e30;
+  /* 灯塔夜空 — 深海军蓝（旗舰主题） */
+  --paper:        #0a1320;
+  --paper-2:      #111f33;
+  --paper-3:      #18283f;
+  --ink:          #e8eef6;
+  --ink-soft:     #9db0c8;
+  --ink-faint:    #687991;
+  --rule:         #213247;
+  --rule-strong:  #34495f;
+
+  --brand:        #e3ad4e;
+  --brand-bright: #f0c069;
+  --beacon:       #e3ad4e;
+  --beacon-glow:  rgba(227, 173, 78, .26);
 
   --crimson:        #e3564a;
   --crimson-bright: #ef6a5d;
   --crimson-ink:    #ffd4cf;
   --crimson-soft:   rgba(227, 86, 74, .14);
-  --gold:           #d6a44a;
-  --gold-soft:      rgba(214, 164, 74, .14);
-  --growth:         #71b160;
-  --growth-soft:    rgba(113, 177, 96, .14);
+  --gold:           #e3ad4e;
+  --gold-soft:      rgba(227, 173, 78, .14);
+  --growth:         #4caf6a;
+  --growth-soft:    rgba(76, 175, 106, .14);
+
+  --sig-offense: var(--growth);
+  --sig-watch:   var(--beacon);
+  --sig-defense: var(--crimson);
+
   /* chart series */
   --c-teal:         #3aa6a6;
   --c-violet:       #b08fe0;
   --c-amber:        #e3ad4e;
 
-  --shadow:     0 1px 0 rgba(0, 0, 0, .30), 0 22px 50px -30px rgba(0, 0, 0, .8);
-  --shadow-lift:0 2px 0 rgba(0, 0, 0, .30), 0 34px 70px -34px rgba(227, 86, 74, .35);
+  --shadow:     0 1px 0 rgba(0, 0, 0, .30), 0 22px 50px -30px rgba(0, 0, 0, .75);
+  --shadow-lift:0 2px 0 rgba(0, 0, 0, .30), 0 34px 70px -34px rgba(227, 173, 78, .32);
 
-  --grain-op: .07;
-  --grain-blend: overlay;
+  --grain-op: .06;
+  --grain-blend: screen;
 }
 
 /* ---------- 2. Base / atmosphere --------------------------------------- */
@@ -85,8 +107,8 @@ html {
 body {
   background-color: var(--paper);
   background-image:
-    radial-gradient(120% 80% at 12% -8%, var(--crimson-soft), transparent 55%),
-    radial-gradient(100% 70% at 100% 0%, var(--gold-soft), transparent 50%);
+    radial-gradient(55% 45% at 92% -4%, var(--beacon-glow), transparent 62%),
+    radial-gradient(120% 80% at 6% 108%, rgba(31, 122, 122, .05), transparent 55%);
   background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-serif);
@@ -155,15 +177,20 @@ table, .num, .mono {
   color: var(--ink);
   display: inline-flex;
   align-items: center;
-  gap: .5ch;
+  gap: .55ch;
 }
 .logo a::before {
   content: "";
-  width: 9px; height: 9px;
-  background: var(--crimson);
+  width: 11px; height: 11px;
+  background: radial-gradient(circle at 35% 35%, var(--brand-bright), var(--brand));
   display: inline-block;
-  transform: rotate(45deg) translateY(-1px);
-  box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--crimson-soft);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--beacon-glow), 0 0 12px 1px var(--beacon-glow);
+  animation: beacon-breathe 3.2s ease-in-out infinite;
+}
+@keyframes beacon-breathe {
+  0%, 100% { box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--beacon-glow), 0 0 10px 1px var(--beacon-glow); }
+  50%      { box-shadow: 0 0 0 2px var(--paper), 0 0 0 5px var(--beacon-glow), 0 0 22px 3px var(--beacon-glow); }
 }
 
 /* nav menu */
@@ -1246,6 +1273,173 @@ svg.chart .ch-empty { font-size: 12px; fill: var(--ink-faint); }
   .post-content table th, .post-content table td { padding: 8px 9px; }
   .masthead-top { font-size: .9rem; }
 }
+
+/* =========================================================================
+   20. 灯塔系统 — 信号灯 / 选股榜 / 七要素 / 雷达 / 指标 / 净值 / 光束
+   ========================================================================= */
+
+/* 信号灯 Beacon — 三态（进攻/观望/防守）= CAN SLIM 的 M */
+.beacon-wrap { display: inline-flex; align-items: center; gap: .7em; }
+.beacon-lamp {
+  position: relative; width: 16px; height: 16px; border-radius: 50%; flex: 0 0 auto;
+}
+.beacon-lamp::before {
+  content: ""; position: absolute; inset: -6px; border-radius: 50%;
+  background: radial-gradient(circle, var(--lamp, var(--beacon)) 0%, transparent 70%);
+  opacity: .55; animation: beacon-pulse 2.6s ease-out infinite;
+}
+.beacon-lamp::after {
+  content: ""; position: absolute; inset: 3px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--lamp, var(--beacon)) 65%, #fff), var(--lamp, var(--beacon)));
+  box-shadow: 0 0 10px 1px var(--lamp, var(--beacon));
+}
+.beacon-lamp[data-state="offense"] { --lamp: var(--sig-offense); }
+.beacon-lamp[data-state="watch"]   { --lamp: var(--sig-watch); }
+.beacon-lamp[data-state="defense"] { --lamp: var(--sig-defense); }
+@keyframes beacon-pulse {
+  0%   { transform: scale(.7); opacity: .6; }
+  70%  { transform: scale(1.9); opacity: 0; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+.beacon-label {
+  font-family: var(--font-mono); font-size: .74rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--lamp, var(--beacon));
+}
+
+/* 信号灯条 — 页顶贯穿 */
+.beacon-strip {
+  display: flex; align-items: center; gap: 1em; flex-wrap: wrap;
+  padding: 14px 18px;
+  background: linear-gradient(90deg, var(--paper-2), var(--paper-3) 60%, var(--paper-2));
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--lamp, var(--beacon));
+  border-radius: var(--radius-lg); margin: 0 0 1.6em;
+}
+.beacon-strip[data-state="offense"] { --lamp: var(--sig-offense); }
+.beacon-strip[data-state="watch"]   { --lamp: var(--sig-watch); }
+.beacon-strip[data-state="defense"] { --lamp: var(--sig-defense); }
+.beacon-strip .bs-verdict { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--ink); }
+.beacon-strip .bs-meta {
+  margin-left: auto; font-family: var(--font-mono); font-size: .7rem; color: var(--ink-faint);
+  letter-spacing: .1em; text-transform: uppercase;
+}
+
+/* 选股排行榜 Scoreboard */
+.scoreboard {
+  width: 100%; border-collapse: collapse; font-size: .9rem; margin: 1.4em 0 2em;
+  background: var(--paper); border: 1px solid var(--rule);
+  border-bottom: 2px solid var(--ink); box-shadow: var(--shadow);
+  border-radius: var(--radius); overflow: hidden;
+}
+.scoreboard thead { background: var(--ink); }
+:root[data-theme="dark"] .scoreboard thead { background: var(--paper-3); }
+.scoreboard th {
+  font-family: var(--font-mono); font-weight: 500; font-size: .66rem;
+  letter-spacing: .12em; text-transform: uppercase; text-align: left;
+  padding: 12px 14px; color: var(--paper); white-space: nowrap;
+}
+:root[data-theme="dark"] .scoreboard th { color: var(--ink); }
+.scoreboard td { padding: 12px 14px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.scoreboard tbody tr { transition: background .12s; }
+.scoreboard tbody tr:hover { background: var(--beacon-glow); }
+.scoreboard .sb-rank { font-family: var(--font-mono); color: var(--ink-faint); width: 38px; }
+.scoreboard .sb-name { font-family: var(--font-display); font-weight: 600; font-size: 1rem; }
+.scoreboard .sb-code { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-faint); display: block; }
+.scoreboard .sb-score {
+  font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+  font-weight: 700; font-size: 1.15rem; color: var(--brand); text-align: right;
+}
+.scoreboard .sb-delta { font-family: var(--font-mono); font-size: .78rem; font-weight: 600; text-align: right; }
+.scoreboard .sb-delta.up   { color: var(--crimson); }
+.scoreboard .sb-delta.down { color: var(--growth); }
+
+/* 七要素迷你条 */
+.sb-bars { display: inline-flex; gap: 3px; align-items: flex-end; height: 22px; }
+.sb-bars .b { width: 5px; border-radius: 1px; background: var(--rule-strong); }
+.sb-bars .b[data-h="high"] { background: var(--brand); }
+.sb-bars .b[data-h="mid"]  { background: var(--rule-strong); opacity: .9; }
+
+/* 政策催化徽章 */
+.catalyst {
+  display: inline-flex; align-items: center; gap: .3em;
+  font-family: var(--font-mono); font-size: .66rem; font-weight: 600;
+  padding: .15em .5em; border-radius: 3px;
+  background: var(--beacon-glow); color: var(--brand); border: 1px solid var(--brand);
+}
+
+/* 雷达图（SVG） */
+.radar-card {
+  background: var(--paper); border: 1px solid var(--rule);
+  border-radius: var(--radius-lg); padding: 18px; margin: 0 0 16px; box-shadow: var(--shadow);
+}
+svg.radar { display: block; width: 100%; height: auto; font-family: var(--font-mono); }
+svg.radar .r-axis  { stroke: var(--rule); stroke-width: 1; fill: none; }
+svg.radar .r-fill  { fill: var(--beacon-glow); stroke: var(--brand); stroke-width: 2; }
+svg.radar .r-label { font-size: 11px; fill: var(--ink-soft); font-family: var(--font-display); font-weight: 600; }
+svg.radar .r-vertex{ fill: var(--brand); }
+
+/* 指标卡 */
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 1.6em; }
+.metric {
+  padding: 16px 18px; background: var(--paper-2); border: 1px solid var(--rule);
+  border-top: 3px solid var(--brand); border-radius: var(--radius-lg); box-shadow: var(--shadow);
+  transition: transform .18s, box-shadow .18s;
+}
+.metric:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.metric .m-label { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+.metric .m-value { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.7rem; color: var(--ink); line-height: 1; }
+.metric .m-delta { font-family: var(--font-mono); font-size: .72rem; margin-top: 6px; font-weight: 600; }
+.metric .m-delta.up   { color: var(--crimson); }
+.metric .m-delta.down { color: var(--growth); }
+.metric[data-tone="offense"] { border-top-color: var(--sig-offense); }
+.metric[data-tone="watch"]   { border-top-color: var(--sig-watch); }
+.metric[data-tone="defense"] { border-top-color: var(--sig-defense); }
+
+/* 环形分数 */
+.score-ring { position: relative; display: inline-grid; place-items: center; }
+.score-ring svg { transform: rotate(-90deg); }
+.score-ring .sr-track { stroke: var(--rule); fill: none; }
+.score-ring .sr-prog  { stroke: var(--brand); stroke-linecap: round; fill: none; transition: stroke-dashoffset 1s ease; }
+.score-ring .sr-num {
+  position: absolute; font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+  font-weight: 700; font-size: 1.6rem; color: var(--ink);
+}
+
+/* 首页导航卡标签 */
+.navcard-tag {
+  font-family: var(--font-mono); font-size: .58rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--brand);
+  margin-bottom: 3px;
+}
+.navcard { gap: 4px; }
+
+/* 灯塔光束（hero 扫光） */
+.lighthouse-hero { position: relative; overflow: hidden; }
+.lighthouse-hero::after {
+  content: ""; position: absolute; top: -50%; right: -20%;
+  width: 55%; height: 200%;
+  background: linear-gradient(105deg, transparent 42%, var(--beacon-glow) 50%, transparent 58%);
+  transform: translateX(120%) rotate(8deg);
+  animation: sweep 7s ease-in-out infinite; pointer-events: none;
+}
+@keyframes sweep { 0%, 100% { transform: translateX(120%) rotate(8deg); } 50% { transform: translateX(-30%) rotate(8deg); } }
+
+/* 渐入 */
+.fade-up { opacity: 0; transform: translateY(12px); animation: fadeUp .6s ease forwards; }
+.fade-up:nth-child(2) { animation-delay: .06s; }
+.fade-up:nth-child(3) { animation-delay: .12s; }
+.fade-up:nth-child(4) { animation-delay: .18s; }
+.fade-up:nth-child(5) { animation-delay: .24s; }
+.fade-up:nth-child(6) { animation-delay: .30s; }
+@keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+/* 七要素条（体检 / 首页） */
+.factor-row { display: grid; grid-template-columns: 1.4em 1fr auto; align-items: center; gap: .8em; padding: .55em 0; border-bottom: 1px solid var(--rule); }
+.factor-row .f-letter { font-family: var(--font-display); font-weight: 700; color: var(--brand); font-size: 1.15rem; }
+.factor-row .f-name { font-size: .9rem; color: var(--ink-soft); }
+.factor-row .f-val { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 600; font-size: .82rem; color: var(--ink); }
+.factor-track { grid-column: 2; height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; margin-top: 4px; }
+.factor-track .f-fill { height: 100%; background: linear-gradient(90deg, var(--brand-bright), var(--brand)); border-radius: 2px; }
 
 /* ---------- 15. Motion / a11y ------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {

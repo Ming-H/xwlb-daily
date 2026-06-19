@@ -1,6 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#a8281e"/>
-  <rect x="32" y="10" width="30" height="30" rx="4" transform="rotate(45 32 32)" fill="#f4efe2"/>
-  <rect x="32" y="22" width="13" height="13" rx="2.5" transform="rotate(45 32 32)" fill="#a8281e"/>
-  <circle cx="32" cy="32" r="2.4" fill="#f4efe2"/>
+  <defs>
+    <radialGradient id="lamp" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f4c869"/>
+      <stop offset="100%" stop-color="#b8801a"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="13" fill="#0a1320"/>
+  <path d="M32 23 L4 4 L4 0 L60 0 L60 4 Z" fill="url(#lamp)" opacity="0.22"/>
+  <circle cx="32" cy="23" r="6.5" fill="url(#lamp)"/>
+  <circle cx="32" cy="23" r="6.5" fill="none" stroke="#f4c869" stroke-width="0.6" opacity="0.6"/>
+  <path d="M25 30 L39 30 L41.5 53 L22.5 53 Z" fill="#e3ad4e"/>
+  <path d="M30 30 L30 53 M34 30 L34 53" stroke="#0a1320" stroke-width="0.8" opacity="0.35"/>
+  <rect x="19" y="53" width="26" height="4" rx="1" fill="#9db0c8"/>
+  <rect x="21.5" y="57" width="21" height="3" rx="1" fill="#687991"/>
 </svg>

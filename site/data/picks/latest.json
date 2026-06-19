@@ -1,0 +1,15 @@
+{
+  "market_state": "watch",
+  "updated": "2026-06-19 18:00",
+  "count": 5320,
+  "top20": [
+    {"code": "300750", "name": "宁德时代", "score": 84.5, "price": 210.5, "ch60d": 25.3, "L": 92, "S": 75, "catalyst": true, "factors": {"C": 80, "A": 70, "N": 85, "S": 75, "L": 92, "I": 60, "M": 50}},
+    {"code": "002475", "name": "立讯精密", "score": 81.2, "price": 35.2, "ch60d": 18.7, "L": 78, "S": 80, "catalyst": true, "factors": {"C": 85, "A": 75, "N": 72, "S": 80, "L": 78, "I": 55, "M": 50}},
+    {"code": "600519", "name": "贵州茅台", "score": 78.2, "price": 1498.0, "ch60d": 12.1, "L": 66, "S": 55, "catalyst": false, "factors": {"C": 70, "A": 95, "N": 60, "S": 55, "L": 66, "I": 50, "M": 50}},
+    {"code": "000333", "name": "美的集团", "score": 74.6, "price": 68.5, "ch60d": 8.4, "L": 58, "S": 65, "catalyst": false, "factors": {"C": 65, "A": 80, "N": 55, "S": 65, "L": 58, "I": 48, "M": 50}},
+    {"code": "601012", "name": "隆基绿能", "score": 71.3, "price": 18.3, "ch60d": 31.2, "L": 88, "S": 70, "catalyst": true, "factors": {"C": 40, "A": 60, "N": 78, "S": 70, "L": 88, "I": 45, "M": 50}},
+    {"code": "600036", "name": "招商银行", "score": 68.9, "price": 35.8, "ch60d": 5.2, "L": 52, "S": 50, "catalyst": false, "factors": {"C": 55, "A": 85, "N": 48, "S": 50, "L": 52, "I": 52, "M": 50}},
+    {"code": "300059", "name": "东方财富", "score": 66.4, "price": 14.2, "ch60d": 15.6, "L": 70, "S": 68, "catalyst": false, "factors": {"C": 50, "A": 65, "N": 62, "S": 68, "L": 70, "I": 40, "M": 50}},
+    {"code": "002594", "name": "比亚迪", "score": 75.8, "price": 248.0, "ch60d": 22.1, "L": 85, "S": 72, "catalyst": true, "factors": {"C": 78, "A": 82, "N": 70, "S": 72, "L": 85, "I": 48, "M": 50}}
+  ]
+}
