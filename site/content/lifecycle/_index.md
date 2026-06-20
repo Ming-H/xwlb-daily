@@ -1,6 +1,6 @@
 ---
-title: "政策生命周期 · 2026年6月19日"
-date: "2026-06-19"
+title: "政策生命周期 · 2026年6月20日"
+date: "2026-06-20"
 draft: false
 layout: "lifecycle"
 ---
@@ -13,7 +13,7 @@ layout: "lifecycle"
       <span class="badge" data-lvl="gold" data-kind="stage">积极推进</span>
     </header>
     <div class="lc-stats">
-      <span class="kv"><i>首次出现</i><b>20260615</b></span>      <span class="kv"><i>近7天</i><b>1次</b></span>      <span class="kv"><i>累计</i><b>1次</b></span>    </div>
+      <span class="kv"><i>首次出现</i><b>20260615</b></span>      <span class="kv"><i>近7天</i><b>2次</b></span>      <span class="kv"><i>累计</i><b>2次</b></span>    </div>
   </article>
   <article class="lc-card" data-lvl="gold">
     <header class="lc-head">
@@ -29,6 +29,14 @@ layout: "lifecycle"
       <span class="badge" data-lvl="red" data-kind="stage">密集政策期</span>
     </header>
     <div class="lc-stats">
+      <span class="kv"><i>首次出现</i><b>20260615</b></span>      <span class="kv"><i>近7天</i><b>4次</b></span>      <span class="kv"><i>累计</i><b>4次</b></span>    </div>
+  </article>
+  <article class="lc-card" data-lvl="red">
+    <header class="lc-head">
+      <span class="dot" data-lvl="red" aria-hidden="true"></span>      <h2>半导体</h2>
+      <span class="badge" data-lvl="red" data-kind="stage">密集政策期</span>
+    </header>
+    <div class="lc-stats">
       <span class="kv"><i>首次出现</i><b>20260615</b></span>      <span class="kv"><i>近7天</i><b>3次</b></span>      <span class="kv"><i>累计</i><b>3次</b></span>    </div>
   </article>
   <article class="lc-card" data-lvl="red">
@@ -38,14 +46,6 @@ layout: "lifecycle"
     </header>
     <div class="lc-stats">
       <span class="kv"><i>首次出现</i><b>20260611</b></span>      <span class="kv"><i>近7天</i><b>6次</b></span>      <span class="kv"><i>累计</i><b>6次</b></span>    </div>
-  </article>
-  <article class="lc-card" data-lvl="red">
-    <header class="lc-head">
-      <span class="dot" data-lvl="red" aria-hidden="true"></span>      <h2>石油能源</h2>
-      <span class="badge" data-lvl="red" data-kind="stage">密集政策期</span>
-    </header>
-    <div class="lc-stats">
-      <span class="kv"><i>首次出现</i><b>20260611</b></span>      <span class="kv"><i>近7天</i><b>7次</b></span>      <span class="kv"><i>累计</i><b>9次</b></span>    </div>
   </article>
 </div>
 
