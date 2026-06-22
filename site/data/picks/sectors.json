@@ -458,5 +458,55 @@
       "sector": "消费",
       "detail": "连续4天出现"
     }
+  ],
+  "strong": [
+    {
+      "code": "300475",
+      "name": "香农芯创",
+      "score": 90.0,
+      "catalyst": true
+    },
+    {
+      "code": "000657",
+      "name": "中钨高新",
+      "score": 86.5,
+      "catalyst": true
+    },
+    {
+      "code": "603986",
+      "name": "兆易创新",
+      "score": 85.4,
+      "catalyst": true
+    },
+    {
+      "code": "688630",
+      "name": "芯碁微装",
+      "score": 81.0,
+      "catalyst": true
+    },
+    {
+      "code": "600549",
+      "name": "厦门钨业",
+      "score": 80.0,
+      "catalyst": true
+    },
+    {
+      "code": "301377",
+      "name": "鼎泰高科",
+      "score": 79.1,
+      "catalyst": false
+    },
+    {
+      "code": "002281",
+      "name": "光迅科技",
+      "score": 78.1,
+      "catalyst": true
+    },
+    {
+      "code": "002916",
+      "name": "深南电路",
+      "score": 77.4,
+      "catalyst": true
+    }
   ]
 }

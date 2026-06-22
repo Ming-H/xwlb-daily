@@ -75,7 +75,10 @@ def build():
     # 异动摘要（取 alerts 前 5，并入同一页，免单独 alerts 页）
     alerts = (sig.get("alerts") or [])[:5]
 
-    res = {"date": sig.get("date"), "sectors": out[:15], "alerts": alerts}
+    # 今日 CAN SLIM 强势股（全市场 top，集中在景气主线）
+    strong = [{"code": s["code"], "name": s["name"], "score": s["score"],
+               "catalyst": s.get("catalyst", False)} for s in latest.get("top20", [])[:8]]
+    res = {"date": sig.get("date"), "sectors": out[:15], "alerts": alerts, "strong": strong}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(res, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     main_n = sum(1 for x in out if x["hot_label"] == "主线")
