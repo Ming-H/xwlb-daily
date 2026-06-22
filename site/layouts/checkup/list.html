@@ -27,13 +27,15 @@
 <div id="ck-result" class="ck-hint">从今日 CAN SLIM 候选中选一只，或输入候选代码/名称，即时看七要素体检。完整全市场实时体检需 serverless（规划中）。</div>
 
 <script>
-window.LH_PICKS = {{ $l.top20 | jsonify }};
+window.LH_PICKS = {{ $l.top20 | jsonify | safeJS }};
+var PICKS = window.LH_PICKS;
+if(typeof PICKS === "string"){ try{ PICKS = JSON.parse(PICKS); }catch(e){ PICKS = []; } }
 var FACTORS = [["C","当季收益"],["A","年度收益"],["N","新催化"],["S","供需"],["L","领涨强度"],["I","机构"],["M","大盘"]];
 
 function find(q){
   q = (q||"").trim();
   if(!q) return null;
-  return window.LH_PICKS.find(function(s){
+  return PICKS.find(function(s){
     return s.code===q || s.name===q || (s.name||"").indexOf(q)>=0 || (s.code||"").indexOf(q)>=0;
   });
 }
