@@ -263,10 +263,10 @@ def build_sectors_page(date_str: str) -> bool:
     date_fmt = f"{date_str[:4]}年{int(date_str[4:6])}月{int(date_str[6:8])}日"
 
     fm = f"""---
-title: "板块热力图 · {date_fmt}"
+title: "板块景气 · {date_fmt}"
 date: "{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
 draft: false
-layout: "sectors"
+aliases: ["/charts/", "/hotspots/", "/alerts/", "/lifecycle/"]
 ---
 """
 
@@ -530,25 +530,7 @@ def render_brief(date_str: str) -> str:
     if brief.get("thesis"):
         parts.append(f'<p class="brief-thesis">{esc(brief["thesis"])}</p>')
 
-    hls = [h for h in brief.get("highlights", []) if isinstance(h, dict) and h.get("sector")]
-    if hls:
-        parts.append('<div class="brief-highlights">')
-        for h in hls:
-            parts.append('<div class="hl-card">')
-            parts.append(f'<div class="hl-sector">{dot("red")}<span>{esc(h.get("sector", ""))}</span></div>')
-            if h.get("angle"):
-                parts.append(f'<p class="hl-angle">{esc(h["angle"])}</p>')
-            meta = []
-            if h.get("catalyst"):
-                meta.append(kv("催化", h["catalyst"]))
-            if h.get("stocks"):
-                meta.append(kv("龙头", h["stocks"]))
-            if h.get("watch"):
-                meta.append(kv("关注", h["watch"]))
-            if meta:
-                parts.append(f'<div class="hl-meta">{"".join(meta)}</div>')
-            parts.append('</div>')
-        parts.append('</div>')
+    # 板块 highlights 已并入「板块景气」页；daily 仅保留综述 + 风险（去重）
 
     risks = [r for r in brief.get("risks", []) if r]
     if risks:
@@ -704,11 +686,7 @@ def build_all(date_str: str = None):
     build_homepage(date_str)
     build_daily_page(date_str)
     build_daily_full_page(date_str)
-    build_hotspots_page(date_str)
-    build_sectors_page(date_str)
-    build_alerts_page(date_str)
-    build_lifecycle_page(date_str)
-    build_charts_page(date_str)
+    build_sectors_page(date_str)  # 板块景气（已合并 charts/hotspots/alerts/lifecycle）
 
     print(f'\n✅ 内容生成完成')
 

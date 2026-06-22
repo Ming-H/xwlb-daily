@@ -1,8 +1,8 @@
 ---
-title: "板块热力图 · 2026年6月21日"
+title: "板块景气 · 2026年6月21日"
 date: "2026-06-21"
 draft: false
-layout: "sectors"
+aliases: ["/charts/", "/hotspots/", "/alerts/", "/lifecycle/"]
 ---
 ## 本周板块信号排行
 
