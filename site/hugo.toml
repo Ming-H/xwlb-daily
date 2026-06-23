@@ -47,21 +47,16 @@ ignoreLogs = ['warning-goldmark-raw-html']
   url = ""
 
 [[menu.main]]
-  name = "市场全景"
+  name = "投资工作台"
   weight = 2
-  url = "market/"
+  url = "workbench/"
 
 [[menu.main]]
-  name = "选股工作台"
+  name = "涨幅榜"
   weight = 3
-  url = "stocks/"
-
-[[menu.main]]
-  name = "命中回看"
-  weight = 4
-  url = "hit-rate/"
+  url = "movers/"
 
 [[menu.main]]
   name = "新闻存档"
-  weight = 5
+  weight = 4
   url = "daily/"

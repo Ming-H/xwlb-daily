@@ -1,10 +1,7 @@
 {{- define "main" -}}
-
-{{- $sig := .Site.Data.signal -}}
-{{- $l := .Site.Data.picks.latest -}}
-{{- $sec := .Site.Data.picks.sectors -}}
 {{- $daily := where .Site.RegularPages "Section" "daily" -}}
 {{- $latest := index $daily 0 -}}
+{{- $sig := .Site.Data.signal -}}
 
 <header class="masthead lighthouse-hero">
   <div class="masthead-top">
@@ -19,79 +16,13 @@
     <span class="vol">A 股投资辅助终端 · CAN SLIM × 静水（对标 IBD 体系）</span>
   </h1>
   <p class="masthead-tag">
-    每日 <b>新闻联播 + 宏观</b> 研判大势，每交易日 <b>全市场 CAN SLIM 打分</b> 选股，对标《投资者商业日报》的 Market Pulse / IBD 50 / Big Picture 体系，A 股本土化。
+    每日 <b>新闻联播 + 宏观</b> 研判大势，每交易日 <b>全市场 CAN SLIM 打分</b> 选股，附 <b>近一月涨幅榜</b>（笑傲股市 L+N+S 看图）。
   </p>
 </header>
 
-{{- /* ============ MARKET PULSE（IBD 标志：大字市场状态） ============ */ -}}
-<section class="home-nav">
-  <h2 class="nav-heading">MARKET PULSE · 市场脉搏（CAN SLIM 的 M）</h2>
-  {{- with $sig -}}
-  <div class="beacon-strip" data-state="{{ .market_state }}" style="padding:18px 22px">
-    <span class="beacon-lamp" data-state="{{ .market_state }}"></span>
-    <span class="bs-verdict" style="font-size:1.5rem;font-family:var(--font-display)">{{ if eq .market_state "offense" }}🟢 进攻 Confirmed Uptrend{{ else if eq .market_state "defense" }}🔴 防守 Market in Correction{{ else }}🟡 观望 Uptrend Under Pressure{{ end }}</span>
-    <span class="bs-meta">{{ .date }} · GLM 研判</span>
-  </div>
-  <p class="lead" style="margin:.6em 0 0">{{ .verdict }}{{ with .reason }}<br><span style="font-size:.92rem;color:var(--ink-soft)">{{ . }}</span>{{ end }}</p>
-  <p class="lead" style="margin-top:.4em">完整研判与板块 → <a href="{{ "market/" | relURL }}">市场全景</a></p>
-  {{- end -}}
-</section>
-
-{{- /* ============ IBD 50 式 · 灯塔分排行（评分表） ============ */ -}}
-{{- with $l -}}
-<section class="home-nav">
-  <h2 class="nav-heading">IBD 50 式 · 灯塔分 TOP 10（Composite Rating）</h2>
-  <table class="scoreboard">
-    <thead><tr><th>#</th><th>股票</th><th>灯塔分</th><th>C·A·N·S·L·I</th><th>近年</th></tr></thead>
-    <tbody>
-    {{- range $i, $s := first 10 .top20 -}}
-    {{- $f := $s.factors -}}
-    <tr style="cursor:pointer" onclick="location.href='{{ "stocks/" | relURL }}?code={{ $s.code }}'">
-      <td class="sb-rank">{{ add $i 1 }}</td>
-      <td><span class="sb-name">{{ $s.name }}</span><span class="sb-code">{{ $s.code }}</span></td>
-      <td class="sb-score">{{ $s.score }}</td>
-      <td><span class="sb-bars">{{ range $k := slice "C" "A" "N" "S" "L" "I" }}{{ $v := int (index $f $k) }}<span class="b {{ if ge $v 70 }}high{{ else }}mid{{ end }}" style="height:{{ $v }}%"></span>{{ end }}</span></td>
-      <td class="sb-delta {{ if ge $s.ch60d 0 }}up{{ else }}down{{ end }}">{{ printf "%.0f" $s.ch60d }}%</td>
-    </tr>
-    {{- end -}}
-    </tbody>
-  </table>
-  <p class="lead" style="margin-top:.5em">灯塔分 = CAN SLIM 七要素加权（对标 IBD Composite Rating）。完整排行 + 点选体检 → <a href="{{ "stocks/" | relURL }}">选股工作台</a></p>
-</section>
-{{- end -}}
-
-{{- /* ============ BIG PICTURE 板块摘要 ============ */ -}}
-{{- with $sec -}}
-<section class="home-nav">
-  <h2 class="nav-heading">BIG PICTURE · 板块景气（静水 × 政策）</h2>
-  <div style="display:flex;flex-wrap:wrap;gap:8px">
-    {{- range first 8 .sectors -}}
-    <a class="chip" href="{{ "market/" | relURL }}" style="font-size:.82rem;padding:.35em .8em"><span class="badge" data-lvl="{{ .lvl }}" style="margin-right:.3em">{{ .hot_label }}</span>{{ .sector }} <b>{{ .policy_score }}</b></a>
-    {{- end -}}
-  </div>
-  <p class="lead" style="margin-top:.5em">完整板块景气 + 异动 → <a href="{{ "market/" | relURL }}">市场全景</a></p>
-</section>
-{{- end -}}
-
-{{- /* ============ 新闻联播政策面（灯塔独有，保留） ============ */ -}}
-{{- with $latest -}}
-<section class="home-nav">
-  <h2 class="nav-heading">新闻联播 · 政策面（灯塔 M 信号源）</h2>
-  <article class="post-entry" style="margin:0">
-    <header class="entry-header"><h2 class="entry-hint-parent">{{ .Title }}</h2></header>
-    <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p></div>
-    <footer class="entry-footer">经济相关 {{ with .Params.economy_count }}{{ . }}{{ end }} / {{ with .Params.total_count }}{{ . }}{{ end }} 条</footer>
-    <a class="entry-link" aria-label="link" href="{{ .Permalink }}"></a>
-  </article>
-  <p class="lead" style="margin-top:.5em">逐条解析 + AI 投资解读 → <a href="{{ "daily/" | relURL }}">新闻联播存档</a></p>
-</section>
-{{- end -}}
-
-{{- /* ============ 导航 ============ */ -}}
 {{- $nav := slice
-  (dict "title" "市场全景" "url" ("market/" | relURL) "desc" "Market Pulse + Big Picture：灯塔信号定大势 + 板块景气选方向" "tag" "定方向")
-  (dict "title" "选股工作台" "url" ("stocks/" | relURL) "desc" "IBD 50 式排行 + Stock Checkup 体检，筛 + 确认" "tag" "选股")
-  (dict "title" "命中回看" "url" ("hit-rate/" | relURL) "desc" "历史候选表现 · 胜率验证（独创）" "tag" "复盘")
+  (dict "title" "投资工作台" "url" ("workbench/" | relURL) "desc" "灯塔信号 + 板块景气 + TOP20 排行/体检 + 命中回看，一页完成每日决策" "tag" "每日决策")
+  (dict "title" "涨幅榜" "url" ("movers/" | relURL) "desc" "近一月涨幅 top + 《笑傲股市》看图（新高 / 放量 / 超买）" "tag" "动量 L+N+S")
   (dict "title" "新闻联播存档" "url" ("daily/" | relURL) "desc" "逐条经济信号 + AI 投资解读" "tag" "原文")
 -}}
 <section class="home-nav">
@@ -105,6 +36,18 @@
     </a>
     {{- end -}}
   </nav>
+</section>
+
+<section class="home-nav">
+  <h2 class="nav-heading">最近存档</h2>
+  {{- range first 5 $daily -}}
+  <article class="post-entry">
+    <header class="entry-header"><h2 class="entry-hint-parent">{{ .Title }}</h2></header>
+    <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p></div>
+    <footer class="entry-footer">{{- with .Params.economy_count -}}经济相关 {{ . }} / {{ end -}}{{- with .Params.total_count -}}{{ . }} 条{{ end -}}</footer>
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  </article>
+  {{- end -}}
 </section>
 
 {{- end -}}
